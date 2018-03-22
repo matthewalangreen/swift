@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees fahrenheit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6z5-c0-rld">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees fahrenheit" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6z5-c0-rld">
                                 <rect key="frame" x="43" y="120" width="288" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -30,14 +30,14 @@
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Celcius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDQ-4O-LTo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Celcius" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDQ-4O-LTo">
                                 <rect key="frame" x="64" y="314" width="247" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is really" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKj-83-BKt">
-                                <rect key="frame" x="130" y="171" width="114" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is really" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKj-83-BKt">
+                                <rect key="frame" x="131" y="171" width="114" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -60,15 +60,23 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="JKj-83-BKt" firstAttribute="top" secondItem="6z5-c0-rld" secondAttribute="bottom" constant="8" id="06W-PY-LCE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JKj-83-BKt" secondAttribute="trailing" id="0FR-7p-aq0"/>
                             <constraint firstItem="NVm-9I-gCb" firstAttribute="centerX" secondItem="6z5-c0-rld" secondAttribute="centerX" id="2FB-0R-kE8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ocd-KT-8v2" secondAttribute="trailing" id="4Ko-e4-usI"/>
+                            <constraint firstItem="Ocd-KT-8v2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7j3-hi-g7f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6z5-c0-rld" secondAttribute="trailing" id="Eyi-BR-ar1"/>
                             <constraint firstItem="Ocd-KT-8v2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QIk-ZA-1Ei"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aDQ-4O-LTo" secondAttribute="trailing" id="R7B-qh-LvT"/>
+                            <constraint firstItem="6z5-c0-rld" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TuX-K0-1lR"/>
                             <constraint firstItem="aDQ-4O-LTo" firstAttribute="centerX" secondItem="6z5-c0-rld" secondAttribute="centerX" id="Yp1-tv-5CS"/>
                             <constraint firstItem="6z5-c0-rld" firstAttribute="top" secondItem="Ocd-KT-8v2" secondAttribute="bottom" constant="8" id="ZJU-TH-WSY"/>
                             <constraint firstItem="6z5-c0-rld" firstAttribute="top" secondItem="Ocd-KT-8v2" secondAttribute="bottom" constant="8" id="ZXz-9o-jGx"/>
                             <constraint firstItem="JKj-83-BKt" firstAttribute="centerX" secondItem="6z5-c0-rld" secondAttribute="centerX" id="bcI-L6-Ugi"/>
+                            <constraint firstItem="JKj-83-BKt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ipL-fr-5yk"/>
                             <constraint firstItem="NVm-9I-gCb" firstAttribute="top" secondItem="JKj-83-BKt" secondAttribute="bottom" constant="8" id="lEC-qP-ibe"/>
                             <constraint firstItem="aDQ-4O-LTo" firstAttribute="top" secondItem="NVm-9I-gCb" secondAttribute="bottom" constant="8" id="m1G-cz-Zu1"/>
                             <constraint firstItem="6z5-c0-rld" firstAttribute="centerX" secondItem="Ocd-KT-8v2" secondAttribute="centerX" id="mBF-8Z-Y1v"/>
+                            <constraint firstItem="aDQ-4O-LTo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="neW-h6-vX9"/>
                             <constraint firstItem="Ocd-KT-8v2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="p2q-f7-Q2S"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
