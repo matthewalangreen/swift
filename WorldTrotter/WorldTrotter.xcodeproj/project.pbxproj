@@ -14,6 +14,7 @@
 		D04D1F422060B38F00C616BB /* WorldTrotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D1F412060B38F00C616BB /* WorldTrotterTests.swift */; };
 		D04D1F4D2060B38F00C616BB /* WorldTrotterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D1F4C2060B38F00C616BB /* WorldTrotterUITests.swift */; };
 		D05AAE9F2061B875000F7917 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05AAE9E2061B875000F7917 /* ConversionViewController.swift */; };
+		D09043A72064097200AD63C7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09043A62064097200AD63C7 /* MapViewController.swift */; };
 		D0F7804520620F8000BF02BA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F7804420620F8000BF02BA /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		D04D1F4C2060B38F00C616BB /* WorldTrotterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterUITests.swift; sourceTree = "<group>"; };
 		D04D1F4E2060B38F00C616BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D05AAE9E2061B875000F7917 /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
+		D09043A62064097200AD63C7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D0F7804420620F8000BF02BA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 				D05AAE9E2061B875000F7917 /* ConversionViewController.swift */,
 				D04D1F2C2060B38F00C616BB /* AppDelegate.swift */,
 				D04D1F302060B38F00C616BB /* Main.storyboard */,
+				D09043A62064097200AD63C7 /* MapViewController.swift */,
 				D04D1F332060B38F00C616BB /* Assets.xcassets */,
 				D04D1F352060B38F00C616BB /* LaunchScreen.storyboard */,
 				D04D1F382060B38F00C616BB /* Info.plist */,
@@ -272,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D05AAE9F2061B875000F7917 /* ConversionViewController.swift in Sources */,
+				D09043A72064097200AD63C7 /* MapViewController.swift in Sources */,
 				D04D1F2D2060B38F00C616BB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
