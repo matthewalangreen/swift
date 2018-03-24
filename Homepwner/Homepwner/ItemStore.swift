@@ -20,11 +20,12 @@ class ItemStore {
         return newItem
     }
     
-    init() {
-        for _ in 0..<5 {
-            createItem()
-        }
-    }
+    // puts five random objects into the store
+//    init() {
+//        for _ in 0..<5 {
+//            createItem()
+//        }
+//    }
 
 }
 
