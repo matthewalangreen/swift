@@ -20,6 +20,13 @@ class ItemStore {
         return newItem
     }
     
+    // remove items. duh
+    func removeItem(_ item: Item) {
+        if let index = allItems.index(of: item) {
+            allItems.remove(at: index)
+        }
+    }
+    
     // puts five random objects into the store
 //    init() {
 //        for _ in 0..<5 {
