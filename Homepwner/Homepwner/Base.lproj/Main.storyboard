@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="jzE-0U-3Jt">
             <objects>
-                <viewController id="QAt-aF-snd" sceneMemberID="viewController">
+                <viewController id="QAt-aF-snd" customClass="DetailViewController" customModule="Homepwner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0vO-D4-j4A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,10 +95,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fwH-4r-olh"/>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="geV-lh-FUv" id="R2J-dd-50v"/>
+                        <outlet property="nameField" destination="361-Qp-TFu" id="ota-Us-yzB"/>
+                        <outlet property="serialNumberField" destination="jGC-I8-Nyw" id="On3-Mn-FBQ"/>
+                        <outlet property="valueField" destination="Hpm-c7-c8E" id="nrx-3u-OZG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SeV-IV-6S0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-373.60000000000002" y="-235.23238380809596"/>
+            <point key="canvasLocation" x="1166" y="-235"/>
         </scene>
         <!--Items View Controller-->
         <scene sceneID="o2F-po-95n">
@@ -178,6 +184,7 @@
                                     <outlet property="nameLabel" destination="9aN-vG-cWX" id="UpU-MM-PYs"/>
                                     <outlet property="serialNumberLabel" destination="0ye-IX-7Cb" id="EnZ-kp-dth"/>
                                     <outlet property="valueLabel" destination="6wn-vv-InL" id="D7G-Ai-06s"/>
+                                    <segue destination="QAt-aF-snd" kind="show" identifier="showItem" id="ZdG-YD-TFf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
