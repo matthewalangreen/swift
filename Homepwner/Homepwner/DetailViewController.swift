@@ -9,7 +9,7 @@
 import UIKit
 
 class DetailViewController: UIViewController, UITextFieldDelegate{
-    
+    @IBOutlet var imageView: UIImageView! // different order than book
     @IBOutlet var nameField: UITextField!
     @IBOutlet var serialNumberField: UITextField!
     @IBOutlet var valueField: UITextField!
