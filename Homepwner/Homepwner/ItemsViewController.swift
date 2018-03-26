@@ -19,7 +19,7 @@ class ItemsViewController: UITableViewController {
         tableView.estimatedRowHeight = 65
     }
     
-    @IBAction func addNewItem(_ sender: UIButton) {
+    @IBAction func addNewItem(_ sender: UIBarButtonItem) {
        // create new item and add it to the store
         let newItem = itemStore.createItem()
         
@@ -128,6 +128,12 @@ class ItemsViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         tableView.reloadData()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        navigationItem.leftBarButtonItem = editButtonItem
     }
 }
 

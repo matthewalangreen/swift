@@ -125,7 +125,7 @@
             </objects>
             <point key="canvasLocation" x="1504.8" y="-235.23238380809596"/>
         </scene>
-        <!--Items View Controller-->
+        <!--Homepwner-->
         <scene sceneID="o2F-po-95n">
             <objects>
                 <tableViewController id="TU6-It-Nwh" customClass="ItemsViewController" customModule="Homepwner" customModuleProvider="target" sceneMemberID="viewController">
@@ -212,7 +212,13 @@
                             <outlet property="delegate" destination="TU6-It-Nwh" id="mWG-bT-vmq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ZvT-yG-3bH"/>
+                    <navigationItem key="navigationItem" title="Homepwner" id="ZvT-yG-3bH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rRb-lF-vb9">
+                            <connections>
+                                <action selector="addNewItem:" destination="TU6-It-Nwh" id="7Yv-Zb-R6h"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d3r-Ye-AAp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
