@@ -32,24 +32,6 @@ class ItemsViewController: UITableViewController {
         }
     }
     
-    @IBAction func toggleEditingMode(_ sender: UIButton) {
-        // if in editing mode
-        if isEditing {
-            // change the button text to inform the user of state
-            sender.setTitle("Edit", for: .normal)
-            
-            // turn off editing mode
-            setEditing(false, animated: true)
-        } else {
-            // change the text of the button to inform the user
-            sender.setTitle("Done", for: .normal)
-            
-            // enter editing mode
-            setEditing(true, animated: true)
-        }
-        
-    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemStore.allItems.count
     }
