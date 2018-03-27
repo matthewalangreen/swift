@@ -12,6 +12,7 @@ class DrawView: UIView {
     
     var currentLines = [NSValue:Line]()
     var finishedLines = [Line]()
+    var selectedLineIndex: Int?
     
     @IBInspectable var finishedLineColor: UIColor = UIColor.black {
         didSet {
@@ -50,6 +51,12 @@ class DrawView: UIView {
         currentLineColor.setStroke()
         for (_, line) in currentLines {
             stroke(line)
+        }
+        
+        if let index = selectedLineIndex {
+            UIColor.green.setStroke()
+            let selectedLine = finishedLines[index]
+            stroke(selectedLine)
         }
     }
     
@@ -123,16 +130,43 @@ class DrawView: UIView {
     
     @objc func tap(_ gestureRecognizer: UIGestureRecognizer) {
         print("Recognized a tap")
+        
+        let point = gestureRecognizer.location(in: self)
+        selectedLineIndex = indexOfLine(at: point)
+        
+        setNeedsDisplay()
     }
     
     @objc func doubleTap(_ gestureRecognizer: UIGestureRecognizer) {
         print("recognized double tap")
         
+        selectedLineIndex = nil
         currentLines.removeAll()
         finishedLines.removeAll()
         setNeedsDisplay()
     }
     
+    func indexOfLine(at point: CGPoint) -> Int? {
+        // find aline close to a point
+        for (index, line) in finishedLines.enumerated() {
+            let begin = line.begin
+            let end = line.end
+            
+            // check a few points on the line
+            for t in stride(from: CGFloat(0), to: 1.0, by: 0.05) {
+                let x = begin.x + ((end.x - begin.x) * t)
+                let y = begin.y + ((end.y - begin.y) * t)
+                
+                // if the tapped point is within 2- points, let's return this line
+                if hypot(x - point.x, y - point.y) < 20.0 {
+                    return index
+                }
+            }
+        }
+        
+        // if nothing is close enough to the tapped point, then we did not select a line
+        return nil
+    }
     
 }
 
