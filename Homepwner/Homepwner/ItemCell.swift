@@ -1,14 +1,11 @@
 //
-//  ItemCell.swift
-//  Homepwner
-//
-//  Created by Matt Green on 3/24/18.
-//  Copyright © 2018 Matt Green. All rights reserved.
+//  Copyright © 2015 Big Nerd Ranch
 //
 
 import UIKit
 
 class ItemCell: UITableViewCell {
+    
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var serialNumberLabel: UILabel!
     @IBOutlet var valueLabel: UILabel!
@@ -20,4 +17,5 @@ class ItemCell: UITableViewCell {
         serialNumberLabel.adjustsFontForContentSizeCategory = true
         valueLabel.adjustsFontForContentSizeCategory = true
     }
+    
 }

@@ -1,16 +1,41 @@
 //
-//  ItemStore.swift
-//  Homepwner
-//
-//  Created by Matt Green on 3/23/18.
-//  Copyright © 2018 Matt Green. All rights reserved.
+//  Copyright © 2015 Big Nerd Ranch
 //
 
-import UIKit
+import Foundation
 
 class ItemStore {
     
-    var allItems = [Item]()
+    var allItems: [Item] = []
+    let itemArchiveURL: URL = {
+        let documentsDirectories =
+            FileManager.default.urls(for: .documentDirectory,
+                                     in: .userDomainMask)
+        let documentDirectory = documentsDirectories.first!
+        return documentDirectory.appendingPathComponent("items.archive")
+    }()
+    
+    init() {
+        if let archivedItems =
+            NSKeyedUnarchiver.unarchiveObject(withFile: itemArchiveURL.path) as? [Item] {
+                allItems += archivedItems
+        }
+    }
+    
+    func moveItem(from fromIndex: Int, to toIndex: Int) {
+        if fromIndex == toIndex {
+            return
+        }
+        
+        // Get reference to object being moved so you can re-insert it
+        let movedItem = allItems[fromIndex]
+        
+        // Remove item from array
+        allItems.remove(at: fromIndex)
+        
+        // Insert item in array at new location
+        allItems.insert(movedItem, at: toIndex)
+    }
     
     @discardableResult func createItem() -> Item {
         let newItem = Item(random: true)
@@ -20,48 +45,15 @@ class ItemStore {
         return newItem
     }
     
-    // remove items. duh
     func removeItem(_ item: Item) {
         if let index = allItems.index(of: item) {
             allItems.remove(at: index)
         }
     }
     
-    func moveItem(from fromIndex: Int, to toIndex: Int) {
-        if fromIndex == toIndex {
-            return
-        }
-        
-        // get reference to object being moved so we can reinsert it
-        let movedItem = allItems[fromIndex]
-        
-        // remove item from the array
-        allItems.remove(at: fromIndex)
-        
-        // insert item at new location
-        allItems.insert(movedItem, at: toIndex)
+    func saveChanges() -> Bool {
+        print("Saving items to: \(itemArchiveURL.path)")
+        return NSKeyedArchiver.archiveRootObject(allItems, toFile: itemArchiveURL.path)
     }
     
-    // puts five random objects into the store
-//    init() {
-//        for _ in 0..<5 {
-//            createItem()
-//        }
-//    }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

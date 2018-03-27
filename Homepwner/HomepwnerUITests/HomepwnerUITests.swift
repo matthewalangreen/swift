@@ -1,9 +1,5 @@
 //
-//  HomepwnerUITests.swift
-//  HomepwnerUITests
-//
-//  Created by Matt Green on 3/23/18.
-//  Copyright © 2018 Matt Green. All rights reserved.
+//  Copyright © 2015 Big Nerd Ranch
 //
 
 import XCTest
@@ -19,8 +15,6 @@ class HomepwnerUITests: XCTestCase {
         continueAfterFailure = false
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
     
     override func tearDown() {

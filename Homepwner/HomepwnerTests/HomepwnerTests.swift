@@ -1,9 +1,5 @@
 //
-//  HomepwnerTests.swift
-//  HomepwnerTests
-//
-//  Created by Matt Green on 3/23/18.
-//  Copyright © 2018 Matt Green. All rights reserved.
+//  Copyright © 2015 Big Nerd Ranch
 //
 
 import XCTest

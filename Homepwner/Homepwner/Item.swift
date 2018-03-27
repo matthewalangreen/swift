@@ -1,14 +1,11 @@
 //
-//  Item.swift
-//  Homepwner
-//
-//  Created by Matt Green on 3/23/18.
-//  Copyright © 2018 Matt Green. All rights reserved.
+//  Copyright © 2015 Big Nerd Ranch
 //
 
-import UIKit
+import Foundation
 
-class Item: NSObject {
+class Item: NSObject, NSCoding {
+    
     var name: String
     var valueInDollars: Int
     var serialNumber: String?
@@ -17,12 +14,10 @@ class Item: NSObject {
     
     init(name: String, serialNumber: String?, valueInDollars: Int) {
         self.name = name
-        self.valueInDollars = valueInDollars
         self.serialNumber = serialNumber
+        self.valueInDollars = valueInDollars
         self.dateCreated = Date()
         self.itemKey = UUID().uuidString
-        
-        super.init()
     }
     
     convenience init(random: Bool = false) {
@@ -38,23 +33,15 @@ class Item: NSObject {
             
             let randomName = "\(randomAdjective) \(randomNoun)"
             let randomValue = Int(arc4random_uniform(100))
+            let randomSerialNumber =
+            UUID().uuidString.components(separatedBy: "-").first!
             
-            let randomSerialNumber = UUID().uuidString.components(separatedBy: "-").first!
-            
-            self.init(name: randomName, serialNumber: randomSerialNumber, valueInDollars: randomValue)
-            
+            self.init(name: randomName,
+                serialNumber: randomSerialNumber,
+                valueInDollars: randomValue)
         } else {
             self.init(name: "", serialNumber: nil, valueInDollars: 0)
         }
-    }
-    
-    func encode(with aCoder: NSCoder) {
-        aCoder.encode(name, forKey: "name")
-        aCoder.encode(dateCreated, forKey: "dateCreated")
-        aCoder.encode(itemKey, forKey: "itemKey")
-        aCoder.encode(serialNumber, forKey: "serialNumber")
-        
-        aCoder.encode(valueInDollars, forKey: "valueInDollars")
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -67,21 +54,14 @@ class Item: NSObject {
         
         super.init()
     }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(name, forKey: "name")
+        aCoder.encode(dateCreated, forKey: "dateCreated")
+        aCoder.encode(itemKey, forKey: "itemKey")
+        aCoder.encode(serialNumber, forKey: "serialNumber")
+        
+        aCoder.encode(valueInDollars, forKey: "valueInDollars")
+    }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
