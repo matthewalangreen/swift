@@ -12,7 +12,18 @@ class DrawView: UIView {
     
     var currentLines = [NSValue:Line]()
     var finishedLines = [Line]()
-    var selectedLineIndex: Int?
+    var selectedLineIndex: Int? {
+        didSet {
+            if selectedLineIndex == nil {
+                let menu = UIMenuController.shared
+                menu.setMenuVisible(false, animated: true)
+            }
+        }
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
     
     @IBInspectable var finishedLineColor: UIColor = UIColor.black {
         didSet {
@@ -134,6 +145,26 @@ class DrawView: UIView {
         let point = gestureRecognizer.location(in: self)
         selectedLineIndex = indexOfLine(at: point)
         
+        // grab the menu controller
+        let menu = UIMenuController.shared
+        
+        if selectedLineIndex != nil {
+            // make DrawView the target  of menu item action messages
+            becomeFirstResponder()
+            
+            // Create a new "delete" menu item
+            let deleteItem = UIMenuItem(title: "Delete", action: #selector(DrawView.deleteLine(_:)))
+            menu.menuItems = [deleteItem]
+            
+            // Tell the menu where it should come from and show it
+            let targetRect = CGRect(x: point.x, y: point.y, width: 2, height: 2)
+            menu.setTargetRect(targetRect, in: self)
+            menu.setMenuVisible(true, animated: true)
+        } else {
+            // hide the menu if no line is selected
+            menu.setMenuVisible(false, animated: true)
+        }
+        
         setNeedsDisplay()
     }
     
@@ -166,6 +197,17 @@ class DrawView: UIView {
         
         // if nothing is close enough to the tapped point, then we did not select a line
         return nil
+    }
+    
+    @objc func deleteLine(_ sender: UIMenuController) {
+        // Remove the selected line  from the list of finished lines
+        if let index = selectedLineIndex {
+            finishedLines.remove(at: index)
+            selectedLineIndex = nil
+            
+            // redraw everything
+            setNeedsDisplay()
+        }
     }
     
 }
