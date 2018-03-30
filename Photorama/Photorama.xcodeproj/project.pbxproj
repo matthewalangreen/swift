@@ -16,6 +16,7 @@
 		D0DD6FD3206DBC5A00D74C15 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DD6FD2206DBC5A00D74C15 /* PhotosViewController.swift */; };
 		D0DD6FD5206DBE6000D74C15 /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DD6FD4206DBE6000D74C15 /* FlickrAPI.swift */; };
 		D0DD6FD7206DC23300D74C15 /* PhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DD6FD6206DC23300D74C15 /* PhotoStore.swift */; };
+		D0DD6FD9206DC4ED00D74C15 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DD6FD8206DC4ED00D74C15 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		D0DD6FD2206DBC5A00D74C15 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		D0DD6FD4206DBE6000D74C15 /* FlickrAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
 		D0DD6FD6206DC23300D74C15 /* PhotoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStore.swift; sourceTree = "<group>"; };
+		D0DD6FD8206DC4ED00D74C15 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				D0DD6FD2206DBC5A00D74C15 /* PhotosViewController.swift */,
+				D0DD6FD8206DC4ED00D74C15 /* Photo.swift */,
 				D0DD6FA4206DBBF900D74C15 /* AppDelegate.swift */,
 				D0DD6FA8206DBBF900D74C15 /* Main.storyboard */,
 				D0DD6FD4206DBE6000D74C15 /* FlickrAPI.swift */,
@@ -269,6 +272,7 @@
 				D0DD6FD3206DBC5A00D74C15 /* PhotosViewController.swift in Sources */,
 				D0DD6FD7206DC23300D74C15 /* PhotoStore.swift in Sources */,
 				D0DD6FA5206DBBF900D74C15 /* AppDelegate.swift in Sources */,
+				D0DD6FD9206DC4ED00D74C15 /* Photo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
