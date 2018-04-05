@@ -52,13 +52,26 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
             let photoIndexPath = IndexPath(item: photoIndex, section: 0)
             
             // when the request finishes, only update the cell if its still visible
-            if let cell = self.collectionView.cellForItem(at: photoIndex) as? PhotoCollectionViewCell {
+            if let cell = self.collectionView.cellForItem(at: photoIndexPath) as? PhotoCollectionViewCell {
                 cell.update(with: image)
             }
-        
         }
     }
     
+    override func prepare(for seque: UIStoryboardSegue, sender: Any?) {
+        switch seque.identifier {
+            case "showPhoto"?:
+            if let selectedIndexPath = collectionView.indexPathsForSelectedItems?.first {
+                
+                let photo = photoDataSource.photos[selectedIndexPath.row]
+                
+                let destinationVC = seque.destination as! PhotoInfoViewController
+                destinationVC.photo = photo
+                destinationVC.store = store
+            }
+            default: preconditionFailure("Unexpeted seque identifier")
+        }
+    }
 }
 
 
