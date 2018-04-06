@@ -2,7 +2,7 @@
 //: You can use a playground like a calculator. Type in the math problem you want solved and the results sidebar shows the answer, or the _result_, of the calculation.
 //:
 //: You can use the plus `+` and minus `-` signs for addition and subtraction, just as you’d expect:
-34 + 56 + 230
+4+3
 
 1000 - 300
 

@@ -6,9 +6,15 @@
  - callout(Exercise): Create a constant for each activity you do in the morning before leaving home: things like `brushTeeth`, `uploadPhotos`, `chooseClothes`, `shower`, `goJogging`, `finishHomework`, `fixLunch`, and so on. Think about how many minutes each activity usually takes, and assign that value to each constant.
  */
 let brushTeeth = 3
-// Add more here...
+// Matt's
+let poo = 7
+let shower = 10
+let fixLunch = 5
+let getDressed = 4
+
 
 //: - callout(Exercise): Find the total time of all the activities by adding up the constants. Try to adjust the values or add more activities until the total time looks reasonably close to the actual amount of time you spend getting ready on an average day.
+let totalTime = brushTeeth + poo + shower + fixLunch + getDressed
 
 
 
@@ -17,7 +23,7 @@ let brushTeeth = 3
 //:If there are things you don’t have to do and don't like to do, make a third group and go ahead and sum that one, too. \
 //:\
 //:Make a new constant for each group.
-
+// I like to sleep in the morning. But I don't get to do that.
 
 
 /*:
@@ -25,7 +31,7 @@ let brushTeeth = 3
  
  Change the numbers until you’ve got a design for your ideal morning. What would have to change in order for you to be able to actually spend your morning time this way?
 */
-
+// I have already designed it.  Its optimized.
 
 
 

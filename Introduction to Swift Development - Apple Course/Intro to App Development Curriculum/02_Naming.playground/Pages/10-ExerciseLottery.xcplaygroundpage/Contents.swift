@@ -6,7 +6,7 @@
 */
 // Values you should edit
 let ticketsSold = 1000
-let ticketPrice = 1
+let ticketPrice = 10
 let printingCosts = 20
 let advertising = 50
 /*:
@@ -27,7 +27,7 @@ let totalExpenses = printingCosts + advertising
 let profit = totalTakings - jackpot - totalExpenses
 
 // Distribution
-let programmersCut = profit / 10 // This is the answer you want to get over 100! 👉 
+let programmersCut = profit / 10 // This is the answer you want to get over 100! 👉 // expensive tickets, yo!
 let friendsCut = profit - programmersCut
 
 //:[Previous](@previous)  |  page 11 of 14  |  [Next: Exercise: What Fits on Your iPhone?](@next)
