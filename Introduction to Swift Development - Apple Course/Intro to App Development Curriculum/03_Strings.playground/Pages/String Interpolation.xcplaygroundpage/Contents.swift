@@ -20,7 +20,7 @@ let favoriteFood = "pie"
 let reason = "tasty"
 
 // Define a string below in the pattern "I like ___ because it is ___."
-
+let resultString = "I like \(favoriteFood) because it is \(reason)"
 
 //: On the next page, see what happens with long strings.
 //:

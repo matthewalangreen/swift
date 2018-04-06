@@ -21,7 +21,7 @@ let schoolName = "YOUR SCHOOL NAME"
 let refrain = "hmm hmm HMMM hm-hmm \(schoolName) hmm hmm HMMMMM"
 
 let song = "\(refrain)\n\(refrain)\nYes, \(refrain)"
-
+// no thanks
 
 
 //:

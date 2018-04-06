@@ -14,7 +14,11 @@
  
  _Hint:_ Do all of your calculations in megabytes.
  */
-
+let capacity = 8000
+let taken = 3000
+let remaining = capacity - taken
+let videoMBPerMin = 150
+let result = "You can record \(remaining/videoMBPerMin) more minutes of video."
 
 
 
