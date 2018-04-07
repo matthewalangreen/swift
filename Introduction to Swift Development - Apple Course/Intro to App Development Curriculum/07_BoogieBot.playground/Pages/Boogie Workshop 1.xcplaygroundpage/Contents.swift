@@ -18,7 +18,7 @@
 */
 startBot()
 startRecording()
-
+leftArmUp()
 
 
 

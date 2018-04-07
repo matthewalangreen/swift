@@ -19,6 +19,7 @@ fabulize()
 doTheDisco()
 doTheDisco()
 doTheDisco()
+
 /*:
  Functions are the way programmers group blocks of work together. Recall from the Functions playground that functions help you in these ways:
  
