@@ -32,6 +32,8 @@ breatheBetweenVerses()
 verseTwo()
 breatheBetweenVerses()
 verseThree()
+
+// I'm not gonna do that.  I understand that functions are R.A.D.
 /*: 
  - callout(Exercise): It's been decided that the rhyme shouldn't be about boats any more.\
  Update the print statements in `rowTheBoat()` so the song follows the same pattern but is about something else.\

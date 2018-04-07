@@ -34,7 +34,10 @@ func laughingSubmarine() {
 }
 
 // Write the verse two function below
-
+func verseTwo() {
+    rowTheBoat()
+    laughingSubmarine()
+}
 
 //: On the next page, learn about one of the things that can go wrong when using functions of functions.
 //:

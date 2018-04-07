@@ -9,8 +9,41 @@
  
  Write out the song or meme using `print` statements, then look for patterns and repetition and choose groups of lines to combine into functions. This is a free-form exercise, so you can do whatever you like.
 */
+// This is gross. I'd never do it this way in practice.  
+func yoDawg() {
+    print("Yo Dawg, I heard you like ")
+}
 
+func thingYouLike() {
+    print("food")
+}
 
+func soIPut() {
+    print("so I put")
+}
+
+func inYour() {
+    print("in your")
+}
+
+func soYouCan() {
+    print("so you can")
+}
+
+func whileYou() {
+    print("while you")
+}
+
+yoDawg()
+thingYouLike()
+soIPut()
+thingYouLike()
+inYour()
+thingYouLike()
+soYouCan()
+thingYouLike()
+whileYou()
+thingYouLike()
 
 
 
