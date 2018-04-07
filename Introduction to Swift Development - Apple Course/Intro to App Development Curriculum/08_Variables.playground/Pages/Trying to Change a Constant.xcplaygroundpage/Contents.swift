@@ -5,7 +5,7 @@
  
  As you can see below, this is considered an error. The error is “Cannot assign to value: 'name' is a 'let' constant”. Now that you know more about what `let` and _constant_ mean, this error makes sense.
 */
-let name = "Johnny"
+var name = "Johnny"
 name = "John"
 /*:
  The error in the gutter looks a little different than normal.
