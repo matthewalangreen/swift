@@ -36,7 +36,7 @@ rightBot.shakeItCenter()
 rightBot.leftLegUp()
 rightBot.leftLegDown()
 
-
+// No thanks, I get how this works
 
 
 

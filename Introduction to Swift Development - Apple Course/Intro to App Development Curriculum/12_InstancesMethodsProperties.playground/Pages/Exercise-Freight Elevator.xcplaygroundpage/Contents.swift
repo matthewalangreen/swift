@@ -6,7 +6,9 @@
  - callout(Exercise):
  Create three constants for items of different weights that you'd like to bring up to your fort: one less than 100, one between 100 and 1000, and one over 1000.
  */
-
+let box = 68
+let desk = 125
+let motorcycle = 1210
 
 
 /*:
@@ -16,6 +18,10 @@
  */
 
 let ricketyRope = TreehousePulley(weightCapacity: 200)
+let strongRope = TreehousePulley(weightCapacity: 2000)
+ricketyRope.canHandleAdditionalLoad(3*box + 2*desk + motorcycle)
+
+// I can't get the addLoadToBasket method to work, nor can I find out any information about it.
 /*:
  - callout(Exercise):
  Use the `TreehousePulley` type's `addLoadToBasket` method to add the items you defined above. Add three of the lightest item, two of the middle-weight item, and one of the heaviest item. Add the items to the lightweight pulley first, using the `canHandleAdditionalLoad` method to check whether the item would overload the pulley, then move on to your stronger pulley when the first is fully loaded.\

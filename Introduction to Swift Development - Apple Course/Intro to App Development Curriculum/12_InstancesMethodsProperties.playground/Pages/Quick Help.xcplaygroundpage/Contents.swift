@@ -9,6 +9,7 @@
 */
 let example = "It was the best of times"
 example.hasPrefix("It was")
+
 /*: 
  For example, when the cursor is placed anywhere in the `hasPrefix` text, the inspector will show the method’s definition:
  
