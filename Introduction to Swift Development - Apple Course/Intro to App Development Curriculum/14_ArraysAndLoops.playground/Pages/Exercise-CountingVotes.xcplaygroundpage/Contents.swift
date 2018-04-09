@@ -58,7 +58,7 @@ if yesCount > noCount {
  */
 // Add your vote-processing function here:
 
-func printResults(forIssue: String, withVotes: [Bool]) {
+func printResults(forIssue: String, withVotes: [Bool]) -> String{
     var yesVotes = 0
     var noVotes = 0
     for vote in withVotes {
@@ -68,10 +68,10 @@ func printResults(forIssue: String, withVotes: [Bool]) {
             noVotes += 1
         }
     }
-    print("\(forIssue): \(yesVotes) yes, \(noVotes) no")
+    return "\(forIssue): \(yesVotes) yes, \(noVotes) no"
 }
 
-printResults(forIssue: "Does this function work?", withVotes: shouldHaveMorePollOptionsVotes)
+print(printResults(forIssue: "Does this function work?", withVotes: shouldHaveMorePollOptionsVotes))
 
 
 

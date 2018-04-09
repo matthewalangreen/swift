@@ -22,7 +22,11 @@ If the message refers to the Caterpillar, print it to the console.
  The `contains` method is part of the `Foundation` framework that you read about in the “Types” playground. If you try using it and get an error saying “Value of type 'String' has no member 'contains',” follow the instructions from that playground to import the framework into your project.
  */
 // Write the `for…in` loop here:
-
+for message in aliceMessages {
+    if message.contains("Caterpillar") {
+        print(message)
+    }
+}
 
 /*:
  

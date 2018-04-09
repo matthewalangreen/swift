@@ -5,13 +5,25 @@ Think of a goal of yours that can be measured in progress every day, whether itâ
 
  - callout(Exercise): Create an array literal with 20 to 25 items of sample data for your daily activity. It may be something like `let milesBiked = [3, 7.5, 0, 0, 17 ... ]` Feel free to make up or embellish the numbers, but make sure you have entries that are above, below and exactly at the goal you've thought of. _Hint: Make sure to choose the right kind of array for your data, whether `[Double]` or `[Int]`._
 */
-
+let goal = 12
+let milesBiked: [Int] = [1,3,6,2,4,67,43,2,5,7,12,3,5,6,8,3,2,67,5,23,76,3,56,90,12]
+milesBiked.count
 //: - callout(Exercise): Write a function that takes the daily number as an argument and returns a message as a string. It should return a different message based on how close the number comes to your goal. You can be as ambitious and creative as you'd like with your responses, but make sure to return at least two different messages depending on your daily progress!
-
+func checkProgress(item: Int) -> String {
+    if item > goal + 20 {
+        return "Keep going!"
+    } else if item > goal {
+        return "You can do better!"
+    } else {
+        return "what the dillyo?"
+    }
+}
 
 
 //: - callout(Exercise): Write a `forâ€¦in` loop that loops over your sample data, calls your function to get an appropriate message for each item, and prints the message to the console.
-
+for item in milesBiked {
+    print(checkProgress(item: item))
+}
 
 
 
