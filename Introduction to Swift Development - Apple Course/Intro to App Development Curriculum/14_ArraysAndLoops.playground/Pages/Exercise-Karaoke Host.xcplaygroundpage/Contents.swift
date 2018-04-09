@@ -8,14 +8,20 @@
  - callout(Exercise):
  Create an empty array to hold song titles as strings, and use the `append` method to add three or four songs one at a time.
  */
-
-
+var songTitles = [String]()
+songTitles.append("Don't break my heart")
+songTitles.append("For realsies")
+songTitles.append("totally a song title")
+songTitles.append("best title ever")
+songTitles
 
 
 /*:
  - callout(Exercise):
  One enthusiastic singer wants to add three songs at once. Create an array holding this one singer's song list and use the `+=` operator to append their whole list to the end of the group's song list.
  */
+let otherSongs = ["First", "Second", "Third"]
+songTitles += ["First", "Second", "Third"]
 
 
 
@@ -25,7 +31,10 @@
  - callout(Exercise):
  Write a `for…in` loop and, for every song title in the array, print an encouraging announcement to let the next singer know that it's their turn.
  */
-
+for song in songTitles {
+    print(song)
+}
+songTitles.removeAll()
 
 
 

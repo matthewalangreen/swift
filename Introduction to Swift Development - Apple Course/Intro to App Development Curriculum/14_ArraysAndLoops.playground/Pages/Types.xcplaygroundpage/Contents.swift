@@ -22,6 +22,7 @@ let someRating = starRatings[0]
 //:
 //: - callout(Exercise): Try setting `anotherGrade` to a number. What happens?
 var anotherGrade = grades[1]
+anotherGrade = 2
 
 
 //: Next, learn how to work through the values in an array.\

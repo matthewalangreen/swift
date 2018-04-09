@@ -18,13 +18,25 @@ let shouldHaveMorePollOptionsVotes: [Bool] = [false, false, true, true, false, t
 
 //: - callout(Exercise): Create two variables, one to count `yes` votes and one to count `no` votes. Each should start off with a value of zero.
 //:
-
+var yesCount: Int = 0
+var noCount: Int = 0
 //: - callout(Exercise): Create a `for…in` loop that loops over one of the vote collections and checks the value of each vote. If the vote is `true`, the loop should add one vote to the `yes` variable. If it's `false`, it should add one vote to the `no` variable.
+for vote in shouldMascotChangeVotes {
+    if vote == true {
+        yesCount += 1
+    } else {
+        noCount += 1
+    }
+}
 
 
 
 //: - callout(Exercise): After the loop has finished, write an `if` statement that compares the two values and prints a different message based on whether the vote passed or failed.
-
+if yesCount > noCount {
+    print("Vote Passed!")
+} else {
+    print("Vote Failed!")
+}
 
 
 //: - callout(Exercise): Test your code by calling the `for…in` loop on each of the vote collections.\
@@ -46,7 +58,20 @@ let shouldHaveMorePollOptionsVotes: [Bool] = [false, false, true, true, false, t
  */
 // Add your vote-processing function here:
 
+func printResults(forIssue: String, withVotes: [Bool]) {
+    var yesVotes = 0
+    var noVotes = 0
+    for vote in withVotes {
+        if vote == true {
+            yesVotes += 1
+        } else {
+            noVotes += 1
+        }
+    }
+    print("\(forIssue): \(yesVotes) yes, \(noVotes) no")
+}
 
+printResults(forIssue: "Does this function work?", withVotes: shouldHaveMorePollOptionsVotes)
 
 
 

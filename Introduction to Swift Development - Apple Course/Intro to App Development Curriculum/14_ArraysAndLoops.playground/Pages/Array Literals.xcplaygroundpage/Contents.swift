@@ -20,7 +20,8 @@ let devices = ["iPhone", "iPad", "iPod", "iMac"]
  - experiment: Create a new constant named `highScores` below and assign it an array containing a list of ten numbers.
  */
 // Define highScores array below
-
+let highScores = [10,8,8,7,6,5,4,4,2,1]
+highScores.count
 /*:
 
  
