@@ -4,12 +4,12 @@
  
  You can get the length of a string like this:
 */
-"hello".characters.count
+"hello".count
 //: If you want to choose from one of two different default answers, you can use the remainder operator to get the remainder of the count after dividing by two:
-"a".characters.count % 2
-"ab".characters.count % 2
-"abc".characters.count % 2
-"abcd".characters.count % 2
+"a".count % 2
+"ab".count % 2
+"abc".count % 2
+"abcd".count % 2
 //: This means that you can convert any string into `0` or `1`, then use the result to decide on an answer:
 func responseTo(question: String) -> String {
     
@@ -19,16 +19,19 @@ func responseTo(question: String) -> String {
         return "In the cookie jar!"
     } else if lowerQuestion.hasPrefix("where") {
         return "To the North!"
+    } else if lowerQuestion.hasPrefix("hello") {
+        return "Why, hello there"
     } else {
         
-        let defaultNumber = question.characters.count % 2
+        let defaultNumber = question.count % 3
         
         if defaultNumber == 0 {
             return "That really depends"
-        } else {
+        } else if defaultNumber == 1 {
             return "Ask me again tomorrow"
+        } else {
+            return "Dude, seriously?"
         }
-        
     }
 }
 responseTo(question: "Where are the cookies?")
