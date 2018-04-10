@@ -10,7 +10,7 @@ struct QuestionAnswerer {
         } else if lowerQuestion.hasPrefix("where") {
             return "To the North!"
         } else {
-            let defaultNumber = question.characters.count % 3
+            let defaultNumber = question.count % 3
             
             if defaultNumber == 0 {
                 return "That really depends"
