@@ -6,7 +6,7 @@
  Think of another real-world object and its properties. Make up some actions or behaviors that the object might be able to perform. Write them all in plain English first in a comment:
  */
  // Add your English-language description of the type here. Make sure to add // before each line of your comment description.
- //
+ // A type to hold an assinment score for a given student
  //
  //
 
@@ -16,8 +16,15 @@
  *Hint: If you made any properties with custom types, you can create placeholder types that have empty implementations. (See the TrainingShoe code at the bottom of this page for an example.) The placeholder type below will make sure your playground can run without errors.*
  */
 // Add your own struct here:
+import Foundation
+struct Score {
+    let mark: Int
+    let date: Date
+}
 
-
+let newScore = Score(mark: 12, date: Date())
+newScore.date
+newScore.mark
 
 
 

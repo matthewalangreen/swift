@@ -9,10 +9,12 @@ struct Rectangle {
     let width: Int
     let height: Int
     
+    var area: Int {
+        return height * width
+    }
+    
     func biggerThan(_ rectangle: Rectangle) -> Bool {
-        let areaOne = width * height
-        let areaTwo = rectangle.width * rectangle.height
-        return areaOne > areaTwo
+        return area > rectangle.area
     }
 }
 
