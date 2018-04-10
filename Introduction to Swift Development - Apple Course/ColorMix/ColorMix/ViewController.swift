@@ -57,10 +57,20 @@ class ViewController: UIViewController {
         colorView.backgroundColor = color
     }
     
+    func updateControls() {
+        redSlider.isEnabled = redSwitch.isOn
+        greenSlider.isEnabled = greenSwitch.isOn
+        blueSlider.isEnabled = blueSwitch.isOn
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         colorView.backgroundColor = .black
+        
+        colorView.layer.borderWidth = 5
+        colorView.layer.cornerRadius = 20
+        colorView.layer.borderColor = UIColor.black.cgColor
     }
 
     override func didReceiveMemoryWarning() {
