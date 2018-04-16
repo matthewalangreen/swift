@@ -44,9 +44,21 @@ enum Sign {
                 return GameState.win
             }
         case .paper:
-            return GameState.win
+            if(computerPlay.value == "✋🏻") {
+                return GameState.draw
+            } else if(computerPlay.value == "✌🏻") {
+                return GameState.lose
+            } else {
+                return GameState.win
+            }
         case .scissors:
-            return GameState.win
+            if(computerPlay.value == "✌🏻") {
+                return GameState.draw
+            } else if(computerPlay.value == "👊🏻") {
+                return GameState.lose
+            } else {
+                return GameState.win
+            }
         }
     }
 }
