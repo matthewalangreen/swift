@@ -12,9 +12,26 @@
 		D0BF5ABA2090D07000EC7C80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0BF5AB82090D07000EC7C80 /* Main.storyboard */; };
 		D0BF5ABC2090D07100EC7C80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0BF5ABB2090D07100EC7C80 /* Assets.xcassets */; };
 		D0BF5ABF2090D07100EC7C80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0BF5ABD2090D07100EC7C80 /* LaunchScreen.storyboard */; };
+		D0C390CF20A4A34F00C75DD2 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C390CE20A4A34F00C75DD2 /* OAuthSwift.framework */; };
+		D0C390D020A4A34F00C75DD2 /* OAuthSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0C390CE20A4A34F00C75DD2 /* OAuthSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D0C390D120A4A34F00C75DD2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D0C390D020A4A34F00C75DD2 /* OAuthSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		D0321D032090D26800CD14F2 /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuthSwift.framework; path = NetworkTest/Carthage/Build/iOS/OAuthSwift.framework; sourceTree = "<group>"; };
 		D0BF5AB12090D07000EC7C80 /* NetworkTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0BF5AB42090D07000EC7C80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0BF5AB62090D07000EC7C80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +39,7 @@
 		D0BF5ABB2090D07100EC7C80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0BF5ABE2090D07100EC7C80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0BF5AC02090D07100EC7C80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0C390CE20A4A34F00C75DD2 /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuthSwift.framework; path = NetworkTest/Carthage/Build/iOS/OAuthSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C390CF20A4A34F00C75DD2 /* OAuthSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +57,8 @@
 		D0BF5AA82090D07000EC7C80 = {
 			isa = PBXGroup;
 			children = (
+				D0321D032090D26800CD14F2 /* OAuthSwift.framework */,
+				D0C390CE20A4A34F00C75DD2 /* OAuthSwift.framework */,
 				D0BF5AB32090D07000EC7C80 /* NetworkTest */,
 				D0BF5AB22090D07000EC7C80 /* Products */,
 			);
@@ -74,6 +95,7 @@
 				D0BF5AAD2090D07000EC7C80 /* Sources */,
 				D0BF5AAE2090D07000EC7C80 /* Frameworks */,
 				D0BF5AAF2090D07000EC7C80 /* Resources */,
+				D0C390D120A4A34F00C75DD2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -281,6 +303,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NetworkTest/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = NetworkTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -298,6 +324,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NetworkTest/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = NetworkTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
