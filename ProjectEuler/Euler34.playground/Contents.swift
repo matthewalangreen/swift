@@ -14,7 +14,12 @@ func fact(_ x: Int) -> Int {
     return sum
 }
 
-// still working on this.
+// Example -- digits(324)
+// n = 324
+// i = 1
+// (324 - 324%100)/100  => (324 - 24)/100  =>  300/100 => 3  => Save that digit in list a => [3]
+// (24 - 24%10)/10  => (24 - 4)/10  =>  20/10  => 2 => add that digit to list a => [3,2]
+// (4 - 4%1)/1 => (4 - 0)/1 => 4 => add that digit to list a => [3,2,4]
 func digits(_ num: Int) -> [Int] {
     var a = [Int]() // empty int
     let r = numDigits(Decimal.init(num)) // convert input to decimal for use in helper function
@@ -36,11 +41,22 @@ func numDigits(_ num: Decimal) -> Int {
     var power = 1
     var limit = pow(10,power)
 
+    // Example
+    // num = 324
+    // limit = 10
+    // First Loop
+    //   power = 2
+    //   limit = 100
+    // Second Loop
+    //   power = 3
+    //   limit = 1000
+    // END
+    // return power
     while num > limit {
         power += 1
         limit = pow(10,power)
     }
-    return limit.exponent
+    return power
 }
 
 fact(5)
