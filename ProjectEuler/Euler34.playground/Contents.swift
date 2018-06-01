@@ -17,6 +17,10 @@ func fact(_ x: Int) -> Int {
 // still working on this.
 func digits(_ num: Int) -> [Int] {
     var a = [Int]() // empty int
+    let lim = numDigits(Decimal.init(num))
+    for i in 1...lim {
+       //
+    }
     a.append(1)
     a.append(2)
    return a
@@ -37,6 +41,8 @@ func numDigits(_ num: Decimal) -> Int {
 
 fact(5)
 digits(24)
-numDigits(323)
-
+numDigits(324)
+324%1000
+324%100
+24%10
 
