@@ -17,12 +17,14 @@ func fact(_ x: Int) -> Int {
 // still working on this.
 func digits(_ num: Int) -> [Int] {
     var a = [Int]() // empty int
-    let r = numDigits(Decimal.init(num)) // cast to Decimal
-    var n = num
+    let r = numDigits(Decimal.init(num)) // convert input to decimal for use in helper function
+    var n = num // create a holder so we can update its value in loop
     for i in 1...r {
-        let p = Float(r-i)
-        let val = Int(powf(10,p))
+        // calculate the power of 10 needed to do help decompose value
+        let val = Int(powf(10,Float(r-i)))
+        // add this first digit to the list of digits
         a.append((n-n%val)/val)
+        // find next seed
         n = n%val
     }
    return a
@@ -42,7 +44,7 @@ func numDigits(_ num: Decimal) -> Int {
 }
 
 fact(5)
-digits(324576)
+digits(324)
 numDigits(324)
 324%1000
 324%100
