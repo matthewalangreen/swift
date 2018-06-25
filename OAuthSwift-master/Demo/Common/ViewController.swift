@@ -174,6 +174,7 @@ extension ViewController {
             doOAuthLyft(parameters)
         case "KhanAcademy":
             doOAuthKhanAcademy(parameters)
+            print("OAuthing the shit out of shit, yo")
         default:
             print("\(service) not implemented")
         }
@@ -1362,6 +1363,7 @@ extension ViewController {
             withCallbackURL: URL(string: "oauth-swift://oauth-callback")!,
             success: { credential, response, parameters in
                 self.showTokenAlert(name: serviceParameters["name"], credential: credential)
+                print("we authed, yo!")
 //                print(credential.oauthToken)
 //                print(credential.oauthTokenSecret)
 //                print(parameters["user_id"])
@@ -1369,6 +1371,7 @@ extension ViewController {
         },
             failure: { error in
                 print(error.description)
+                print("No authie here")
         }
         )
     }
