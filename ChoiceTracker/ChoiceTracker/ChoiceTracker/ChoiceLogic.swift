@@ -11,4 +11,14 @@ import Foundation
 
 public func incrementChoice(choice: String) {
     print(" \(choice) choice")
+    
+    switch choice {
+    case "Good":
+        choiceCount += 1
+    case "Bad":
+        choiceCount -= 1
+    default:
+        print("not a valid choice")
+    }
+    
 }

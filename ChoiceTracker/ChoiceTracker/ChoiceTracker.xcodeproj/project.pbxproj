@@ -13,6 +13,7 @@
 		D0022ED9211B5D560080D089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0022ED8211B5D560080D089 /* Assets.xcassets */; };
 		D0022EDC211B5D560080D089 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0022EDA211B5D560080D089 /* LaunchScreen.storyboard */; };
 		D0022EE4211B5F4B0080D089 /* ChoiceLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0022EE3211B5F4B0080D089 /* ChoiceLogic.swift */; };
+		D0022EE6211B62430080D089 /* ChoiceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0022EE5211B62430080D089 /* ChoiceData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D0022EDB211B5D560080D089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0022EDD211B5D560080D089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0022EE3211B5F4B0080D089 /* ChoiceLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceLogic.swift; sourceTree = "<group>"; };
+		D0022EE5211B62430080D089 /* ChoiceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				D0022ED3211B5D550080D089 /* ViewController.swift */,
 				D0022EE3211B5F4B0080D089 /* ChoiceLogic.swift */,
 				D0022ED5211B5D550080D089 /* Main.storyboard */,
+				D0022EE5211B62430080D089 /* ChoiceData.swift */,
 				D0022ED8211B5D560080D089 /* Assets.xcassets */,
 				D0022EDA211B5D560080D089 /* LaunchScreen.storyboard */,
 				D0022EDD211B5D560080D089 /* Info.plist */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0022EE6211B62430080D089 /* ChoiceData.swift in Sources */,
 				D0022ED4211B5D550080D089 /* ViewController.swift in Sources */,
 				D0022ED2211B5D550080D089 /* AppDelegate.swift in Sources */,
 				D0022EE4211B5F4B0080D089 /* ChoiceLogic.swift in Sources */,

@@ -10,9 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var choiceCountTextLabel: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //choiceCountTextLabel.text = "Hi"
+        choiceCountTextLabel.text = String(choiceCount)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,10 +27,14 @@ class ViewController: UIViewController {
 
     @IBAction func addGoodChoice(_ sender: Any) {
         incrementChoice(choice: "Good")
+        choiceCountTextLabel.text = String(choiceCount)
+        self.view.setNeedsDisplay()
     }
     
     @IBAction func addBadChoice(_ sender: Any) {
         incrementChoice(choice: "Bad")
+        choiceCountTextLabel.text = String(choiceCount)
+        self.view.setNeedsDisplay()
     }
 }
 
