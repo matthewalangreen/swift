@@ -41,7 +41,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HG8-lk-Qet" customClass="ABGaugeView" customModule="ABGaugeViewKit">
-                                <rect key="frame" x="37.5" y="229" width="300" height="300"/>
+                                <rect key="frame" x="37.5" y="179" width="300" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="FUH-Ih-PaX"/>
@@ -69,7 +69,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HSf-r4-o1w">
-                                <rect key="frame" x="170" y="529" width="35" height="60"/>
+                                <rect key="frame" x="170" y="479" width="35" height="60"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -85,13 +85,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S7l-Br-1ON" secondAttribute="trailing" constant="100" id="iIK-wC-2xX"/>
                             <constraint firstItem="HSf-r4-o1w" firstAttribute="top" secondItem="HG8-lk-Qet" secondAttribute="bottom" id="ij6-pO-6l5"/>
                             <constraint firstItem="HG8-lk-Qet" firstAttribute="centerX" secondItem="sly-MB-2lv" secondAttribute="centerX" id="nVq-7k-vXC"/>
-                            <constraint firstItem="HG8-lk-Qet" firstAttribute="top" secondItem="sly-MB-2lv" secondAttribute="bottom" constant="100" id="oZB-E0-KiQ"/>
+                            <constraint firstItem="HG8-lk-Qet" firstAttribute="top" secondItem="sly-MB-2lv" secondAttribute="bottom" constant="50" id="oZB-E0-KiQ"/>
                             <constraint firstItem="aMx-UA-9lh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="tav-M8-Ytj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="choiceCountTextLabel" destination="HSf-r4-o1w" id="5Hh-Q5-juC"/>
+                        <outlet property="gaugeView" destination="HG8-lk-Qet" id="W2L-Yf-0Ve"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

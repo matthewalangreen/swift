@@ -9,3 +9,5 @@
 import Foundation
 
 var choiceCount: Int = 0
+
+var gaugeValue: Int = 50

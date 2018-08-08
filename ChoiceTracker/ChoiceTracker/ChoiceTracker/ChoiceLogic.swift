@@ -15,8 +15,10 @@ public func incrementChoice(choice: String) {
     switch choice {
     case "Good":
         choiceCount += 1
+        gaugeValue += 5
     case "Bad":
         choiceCount -= 1
+        gaugeValue -= 5
     default:
         print("not a valid choice")
     }

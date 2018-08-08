@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import ABGaugeViewKit
 
 class ViewController: UIViewController {
+    
 
     //MARK:- Outlets
     @IBOutlet var choiceCountTextLabel: UITextField!
+    @IBOutlet var gaugeView: ABGaugeView!
     
     //MARK:- Actions
     @IBAction func addGoodChoice(_ sender: Any) {
@@ -40,6 +43,7 @@ class ViewController: UIViewController {
     func updateUI() {
         choiceCountTextLabel.text = String(choiceCount)
         colorCounter()
+        gaugeView.needleValue = CGFloat(gaugeValue)
         self.view.setNeedsDisplay()
     }
     
@@ -50,6 +54,10 @@ class ViewController: UIViewController {
            choiceCountTextLabel.textColor = UIColor.red
         }
     }
+    
+    //MARK:- ABGaugeView Custom Behavior
+    
+    
     
 }
 
