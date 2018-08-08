@@ -10,31 +10,46 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //MARK:- Outlets
     @IBOutlet var choiceCountTextLabel: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        //choiceCountTextLabel.text = "Hi"
-        choiceCountTextLabel.text = String(choiceCount)
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    //MARK:- Actions
     @IBAction func addGoodChoice(_ sender: Any) {
         incrementChoice(choice: "Good")
-        choiceCountTextLabel.text = String(choiceCount)
-        self.view.setNeedsDisplay()
+        updateUI()
     }
     
     @IBAction func addBadChoice(_ sender: Any) {
         incrementChoice(choice: "Bad")
+        updateUI()
+    }
+    
+    //MARK:- Template
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
         choiceCountTextLabel.text = String(choiceCount)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK:- UI Logic
+    func updateUI() {
+        choiceCountTextLabel.text = String(choiceCount)
+        colorCounter()
         self.view.setNeedsDisplay()
     }
+    
+    func colorCounter() {
+        if choiceCount >= 0 {
+           choiceCountTextLabel.textColor = UIColor.green
+        } else {
+           choiceCountTextLabel.textColor = UIColor.red
+        }
+    }
+    
 }
 

@@ -27,7 +27,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HSf-r4-o1w">
-                                <rect key="frame" x="155" y="169" width="65" height="120"/>
+                                <rect key="frame" x="155" y="273.5" width="65" height="120"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -49,14 +49,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aMx-UA-9lh" secondAttribute="bottom" constant="100" id="BbZ-ne-CMd"/>
-                            <constraint firstItem="HSf-r4-o1w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EaF-QS-ESS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S7l-Br-1ON" secondAttribute="trailing" constant="100" id="GsX-Vd-wiW"/>
-                            <constraint firstItem="HSf-r4-o1w" firstAttribute="top" secondItem="sly-MB-2lv" secondAttribute="bottom" constant="20" id="JIE-DU-Pc4"/>
-                            <constraint firstItem="sly-MB-2lv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dPZ-iS-iRJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S7l-Br-1ON" secondAttribute="bottom" constant="100" id="lQt-zZ-VY8"/>
-                            <constraint firstItem="sly-MB-2lv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="xDH-j9-Kdj"/>
-                            <constraint firstItem="aMx-UA-9lh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="xb6-c6-W6P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S7l-Br-1ON" secondAttribute="bottom" constant="100" id="0V3-FJ-1qK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aMx-UA-9lh" secondAttribute="bottom" constant="100" id="0ep-b0-sml"/>
+                            <constraint firstItem="HSf-r4-o1w" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BV0-xr-5Di"/>
+                            <constraint firstItem="sly-MB-2lv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FBd-2r-oTj"/>
+                            <constraint firstItem="aMx-UA-9lh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="Wax-qv-nQF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S7l-Br-1ON" secondAttribute="trailing" constant="100" id="fqX-da-uNk"/>
+                            <constraint firstItem="sly-MB-2lv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="hX5-ft-ikR"/>
+                            <constraint firstItem="HSf-r4-o1w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vNZ-8Q-W5J"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
