@@ -14,6 +14,31 @@ func fact(_ x: Int) -> Int {
     return sum
 }
 
+// HELPER FUNCTION
+// returns the number of digits for a given number
+// will be used as a helper function to terminate loops in above function
+func numDigits(_ num: Decimal) -> Int {
+    var power = 1
+    var limit = pow(10,power)
+    
+    // Example
+    // num = 324
+    // limit = 10
+    // First Loop
+    //   power = 2
+    //   limit = 100
+    // Second Loop
+    //   power = 3
+    //   limit = 1000
+    // END
+    // return power
+    while num > limit {
+        power += 1
+        limit = pow(10,power)
+    }
+    return power
+}
+
 // Example -- digits(324)
 // n = 324
 // i = 1
@@ -35,35 +60,48 @@ func digits(_ num: Int) -> [Int] {
    return a
 }
 
-// returns the number of digits for a given number
-// will be used as a helper function to terminate loops in above function
-func numDigits(_ num: Decimal) -> Int {
-    var power = 1
-    var limit = pow(10,power)
 
-    // Example
-    // num = 324
-    // limit = 10
-    // First Loop
-    //   power = 2
-    //   limit = 100
-    // Second Loop
-    //   power = 3
-    //   limit = 1000
-    // END
-    // return power
-    while num > limit {
-        power += 1
-        limit = pow(10,power)
-    }
-    return power
+
+//fact(5)
+//let digs = digits(324)
+//let digitFactorials = digs.map { fact($0) }
+//print(digitFactorials)
+//let sum = digitFactorials.reduce(0,+)
+
+
+//// get a number
+//let n = 5
+//
+//// get its digits
+//var nDigits = digits(n)
+//
+//// get their factorials
+//var sumOfFactorials = nDigits.map { fact($0) }.reduce(0,+)
+//
+//// do all at once
+//let s = digits(n).map { fact($0) }.reduce(0,+)
+//print(s)
+
+// place to keep values
+var vals = [Int]()
+
+func sumOfFactorials(n: Int) -> Int {
+    return digits(n).map { fact($0) }.reduce(0,+)
 }
 
-fact(5)
-digits(324)
-numDigits(324)
-324%1000
-324%100
-24%10
-(4-4%1)/1
+func keepIfMatch(n: Int) {
+    if n == sumOfFactorials(n: n) {
+        vals.append(n)
+        print("match found: \(n)")
+    }
+}
+
+for item in 10_000...100_000 {
+    keepIfMatch(n: item)
+}
+print(vals)
+
+
+
+
 
