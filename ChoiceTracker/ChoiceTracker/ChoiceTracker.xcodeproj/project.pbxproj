@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		468F30F9227783E17D043D35 /* Pods_ChoiceTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12F4E434FC4FCFF217D06730 /* Pods_ChoiceTracker.framework */; };
 		D0022ED2211B5D550080D089 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0022ED1211B5D550080D089 /* AppDelegate.swift */; };
 		D0022ED4211B5D550080D089 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0022ED3211B5D550080D089 /* ViewController.swift */; };
 		D0022ED7211B5D550080D089 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0022ED5211B5D550080D089 /* Main.storyboard */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08410C41942A2987D7D1A8AC /* Pods-ChoiceTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoiceTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChoiceTracker/Pods-ChoiceTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		12F4E434FC4FCFF217D06730 /* Pods_ChoiceTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChoiceTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0022ECE211B5D550080D089 /* ChoiceTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChoiceTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0022ED1211B5D550080D089 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0022ED3211B5D550080D089 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		D0022EDD211B5D560080D089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0022EE3211B5F4B0080D089 /* ChoiceLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceLogic.swift; sourceTree = "<group>"; };
 		D0022EE5211B62430080D089 /* ChoiceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceData.swift; sourceTree = "<group>"; };
+		EA922F0D04CD0FF5CA47B6A3 /* Pods-ChoiceTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoiceTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChoiceTracker/Pods-ChoiceTracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				468F30F9227783E17D043D35 /* Pods_ChoiceTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8071BF3270C48EAFB64D0A32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				12F4E434FC4FCFF217D06730 /* Pods_ChoiceTracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D0022EC5211B5D550080D089 = {
 			isa = PBXGroup;
 			children = (
 				D0022ED0211B5D550080D089 /* ChoiceTracker */,
 				D0022ECF211B5D550080D089 /* Products */,
+				D399CF4F9A0982E4618F08A3 /* Pods */,
+				8071BF3270C48EAFB64D0A32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +85,15 @@
 			path = ChoiceTracker;
 			sourceTree = "<group>";
 		};
+		D399CF4F9A0982E4618F08A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				08410C41942A2987D7D1A8AC /* Pods-ChoiceTracker.debug.xcconfig */,
+				EA922F0D04CD0FF5CA47B6A3 /* Pods-ChoiceTracker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0022EE0211B5D560080D089 /* Build configuration list for PBXNativeTarget "ChoiceTracker" */;
 			buildPhases = (
+				E7E98737733311191E42A3A0 /* [CP] Check Pods Manifest.lock */,
 				D0022ECA211B5D550080D089 /* Sources */,
 				D0022ECB211B5D550080D089 /* Frameworks */,
 				D0022ECC211B5D550080D089 /* Resources */,
+				639CF0F67EFA24A134BB2FE6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +161,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		639CF0F67EFA24A134BB2FE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChoiceTracker/Pods-ChoiceTracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ABGaugeViewKit/ABGaugeViewKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ABGaugeViewKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChoiceTracker/Pods-ChoiceTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7E98737733311191E42A3A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChoiceTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D0022ECA211B5D550080D089 /* Sources */ = {
@@ -286,6 +351,7 @@
 		};
 		D0022EE1211B5D560080D089 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08410C41942A2987D7D1A8AC /* Pods-ChoiceTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +370,7 @@
 		};
 		D0022EE2211B5D560080D089 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA922F0D04CD0FF5CA47B6A3 /* Pods-ChoiceTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

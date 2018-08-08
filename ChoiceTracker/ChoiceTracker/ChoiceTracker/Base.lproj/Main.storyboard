@@ -26,12 +26,6 @@
                                     <action selector="addGoodChoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y3p-l3-MqX"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HSf-r4-o1w">
-                                <rect key="frame" x="155" y="273.5" width="65" height="120"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMx-UA-9lh">
                                 <rect key="frame" x="100" y="495" width="30" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -41,22 +35,58 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choice Counter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sly-MB-2lv">
-                                <rect key="frame" x="106" y="120" width="163" height="29"/>
+                                <rect key="frame" x="106" y="100" width="163" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HG8-lk-Qet" customClass="ABGaugeView" customModule="ABGaugeViewKit">
+                                <rect key="frame" x="37.5" y="229" width="300" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="FUH-Ih-PaX"/>
+                                    <constraint firstAttribute="height" constant="300" id="HfR-tz-RxE"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" red="0.33078351360000002" green="1" blue="0.44553283809999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="firstArea">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="needleColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="secondArea">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="needleValue">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HSf-r4-o1w">
+                                <rect key="frame" x="170" y="529" width="35" height="60"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S7l-Br-1ON" secondAttribute="bottom" constant="100" id="0V3-FJ-1qK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aMx-UA-9lh" secondAttribute="bottom" constant="100" id="0ep-b0-sml"/>
-                            <constraint firstItem="HSf-r4-o1w" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BV0-xr-5Di"/>
-                            <constraint firstItem="sly-MB-2lv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FBd-2r-oTj"/>
-                            <constraint firstItem="aMx-UA-9lh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="Wax-qv-nQF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S7l-Br-1ON" secondAttribute="trailing" constant="100" id="fqX-da-uNk"/>
-                            <constraint firstItem="sly-MB-2lv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="hX5-ft-ikR"/>
-                            <constraint firstItem="HSf-r4-o1w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vNZ-8Q-W5J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aMx-UA-9lh" secondAttribute="bottom" constant="100" id="64N-Dm-t2T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S7l-Br-1ON" secondAttribute="bottom" constant="100" id="8h1-fn-y6B"/>
+                            <constraint firstItem="HSf-r4-o1w" firstAttribute="centerX" secondItem="sly-MB-2lv" secondAttribute="centerX" id="Bpv-4P-Rjl"/>
+                            <constraint firstItem="sly-MB-2lv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="OUY-aD-hgm"/>
+                            <constraint firstItem="sly-MB-2lv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PI0-ju-5A3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S7l-Br-1ON" secondAttribute="trailing" constant="100" id="iIK-wC-2xX"/>
+                            <constraint firstItem="HSf-r4-o1w" firstAttribute="top" secondItem="HG8-lk-Qet" secondAttribute="bottom" id="ij6-pO-6l5"/>
+                            <constraint firstItem="HG8-lk-Qet" firstAttribute="centerX" secondItem="sly-MB-2lv" secondAttribute="centerX" id="nVq-7k-vXC"/>
+                            <constraint firstItem="HG8-lk-Qet" firstAttribute="top" secondItem="sly-MB-2lv" secondAttribute="bottom" constant="100" id="oZB-E0-KiQ"/>
+                            <constraint firstItem="aMx-UA-9lh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="tav-M8-Ytj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -66,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-562" y="146"/>
         </scene>
     </scenes>
 </document>
