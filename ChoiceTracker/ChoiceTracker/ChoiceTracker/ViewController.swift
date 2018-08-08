@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        choiceCountTextLabel.text = String(choiceCount)
+        choiceCountTextLabel.text = String(testChoices.sum())
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,21 +41,25 @@ class ViewController: UIViewController {
     
     //MARK:- UI Logic
     func updateUI() {
-        choiceCountTextLabel.text = String(choiceCount)
-        colorCounter()
-        gaugeView.needleValue = CGFloat(gaugeValue)
+        choiceCountTextLabel.text = String(testChoices.sum())
+       // colorCounter()
+        updateGauge()
         self.view.setNeedsDisplay()
     }
     
-    func colorCounter() {
-        if choiceCount >= 0 {
-           choiceCountTextLabel.textColor = UIColor.green
-        } else {
-           choiceCountTextLabel.textColor = UIColor.red
-        }
+    // change the color of the counter based on value
+//    func colorCounter() {
+//        if choices. >= 0 {
+//           choiceCountTextLabel.textColor = UIColor.green
+//        } else {
+//           choiceCountTextLabel.textColor = UIColor.red
+//        }
+//    }
+    
+    func updateGauge() {
+        gaugeView.needleValue = CGFloat(gaugeValue)
     }
     
-    //MARK:- ABGaugeView Custom Behavior
     
     
     

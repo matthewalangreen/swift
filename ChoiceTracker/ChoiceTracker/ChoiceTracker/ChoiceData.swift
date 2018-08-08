@@ -8,6 +8,8 @@
 
 import Foundation
 
-var choiceCount: Int = 0
+// keep track of choices. "-1" for bad choice "1" for good choice
+var choices: [Int] = []
+var testChoices = DailyChoices()
 
 var gaugeValue: Int = 50

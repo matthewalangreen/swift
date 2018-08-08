@@ -15,6 +15,7 @@
 		D0022EDC211B5D560080D089 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0022EDA211B5D560080D089 /* LaunchScreen.storyboard */; };
 		D0022EE4211B5F4B0080D089 /* ChoiceLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0022EE3211B5F4B0080D089 /* ChoiceLogic.swift */; };
 		D0022EE6211B62430080D089 /* ChoiceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0022EE5211B62430080D089 /* ChoiceData.swift */; };
+		D0785AD8211B9069002615EF /* DailyChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0785AD7211B9069002615EF /* DailyChoices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		D0022EDD211B5D560080D089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0022EE3211B5F4B0080D089 /* ChoiceLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceLogic.swift; sourceTree = "<group>"; };
 		D0022EE5211B62430080D089 /* ChoiceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceData.swift; sourceTree = "<group>"; };
+		D0785AD7211B9069002615EF /* DailyChoices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChoices.swift; sourceTree = "<group>"; };
 		EA922F0D04CD0FF5CA47B6A3 /* Pods-ChoiceTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoiceTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChoiceTracker/Pods-ChoiceTracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +75,7 @@
 		D0022ED0211B5D550080D089 /* ChoiceTracker */ = {
 			isa = PBXGroup;
 			children = (
+				D0785AD7211B9069002615EF /* DailyChoices.swift */,
 				D0022ED1211B5D550080D089 /* AppDelegate.swift */,
 				D0022ED3211B5D550080D089 /* ViewController.swift */,
 				D0022EE3211B5F4B0080D089 /* ChoiceLogic.swift */,
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0022EE6211B62430080D089 /* ChoiceData.swift in Sources */,
+				D0785AD8211B9069002615EF /* DailyChoices.swift in Sources */,
 				D0022ED4211B5D550080D089 /* ViewController.swift in Sources */,
 				D0022ED2211B5D550080D089 /* AppDelegate.swift in Sources */,
 				D0022EE4211B5F4B0080D089 /* ChoiceLogic.swift in Sources */,
