@@ -10,7 +10,6 @@ import Foundation
 
 class DailyChoices {
     var choices: [Int] = [0]
-    //var numChoices = choices.count
     
     func goodChoice() {
         choices.append(1)
@@ -23,6 +22,11 @@ class DailyChoices {
     func sum() -> Int {
         // add 'em up
         let r = choices.reduce(0, +)
+        return r
+    }
+    
+    func numChoices() -> Int {
+        let r = choices.count - 1 // there is an initial "0" in the array... don't count that
         return r
     }
     

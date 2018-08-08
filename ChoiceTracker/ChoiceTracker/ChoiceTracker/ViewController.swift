@@ -14,8 +14,11 @@ class ViewController: UIViewController {
 
     //MARK:- Outlets
 
+    
+    @IBOutlet var numChoicesUITextField: UITextField!
+    @IBOutlet var currentScoreUITextField: UITextField!
     @IBOutlet var gaugeView: ABGaugeView!
-   
+    
 
     //MARK:- Actions
     @IBAction func addGoodChoice(_ sender: Any) {
@@ -42,8 +45,8 @@ class ViewController: UIViewController {
     
     //MARK:- UI Logic
     func updateUI() {
-        //choiceCountTextLabel.text = String(testChoices.sum())
-        
+        currentScoreUITextField.text = String(testChoices.sum())
+        numChoicesUITextField.text = String(testChoices.numChoices())
         updateGauge()
         self.view.setNeedsDisplay()
     }

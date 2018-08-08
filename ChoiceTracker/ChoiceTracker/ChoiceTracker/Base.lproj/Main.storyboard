@@ -74,22 +74,22 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="#CHOICES" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="swx-fV-slE">
-                                <rect key="frame" x="244" y="99" width="91" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Score" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5H-MZ-Xvk">
                                 <rect key="frame" x="44" y="140" width="107" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="SCORE" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gyo-a2-5Y1">
-                                <rect key="frame" x="267" y="139" width="68" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gyo-a2-5Y1">
+                                <rect key="frame" x="166" y="140" width="15" height="21"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="#CHOICES" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="swx-fV-slE">
+                                <rect key="frame" x="200" y="99" width="88" height="21"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
@@ -98,24 +98,26 @@
                             <constraint firstItem="e5H-MZ-Xvk" firstAttribute="top" secondItem="w59-mN-3og" secondAttribute="bottom" constant="20" id="0Yl-kX-Smx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S7l-Br-1ON" secondAttribute="trailing" constant="100" id="2gP-Te-9Ug"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S7l-Br-1ON" secondAttribute="bottom" constant="80" id="3Mc-v5-zhN"/>
+                            <constraint firstItem="Gyo-a2-5Y1" firstAttribute="leading" secondItem="e5H-MZ-Xvk" secondAttribute="trailing" constant="15" id="D8C-BX-BEr"/>
                             <constraint firstItem="sly-MB-2lv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FjJ-CO-LHd"/>
+                            <constraint firstItem="Gyo-a2-5Y1" firstAttribute="top" secondItem="w59-mN-3og" secondAttribute="bottom" constant="20" id="HPH-kx-Yj1"/>
                             <constraint firstItem="HG8-lk-Qet" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JcA-0k-SGp"/>
                             <constraint firstItem="sly-MB-2lv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Kfo-Td-mKd"/>
                             <constraint firstItem="w59-mN-3og" firstAttribute="top" secondItem="sly-MB-2lv" secondAttribute="bottom" constant="20" id="MGr-78-gmR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aMx-UA-9lh" secondAttribute="bottom" constant="80" id="bdu-e4-BZ5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gyo-a2-5Y1" secondAttribute="trailing" constant="40" id="cwG-TG-Y6e"/>
                             <constraint firstItem="swx-fV-slE" firstAttribute="top" secondItem="sly-MB-2lv" secondAttribute="bottom" constant="20" id="dUJ-tX-z4F"/>
-                            <constraint firstItem="Gyo-a2-5Y1" firstAttribute="top" secondItem="swx-fV-slE" secondAttribute="bottom" constant="10" id="iQX-Cu-2Vv"/>
                             <constraint firstItem="HG8-lk-Qet" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oaw-81-O2Q"/>
                             <constraint firstItem="aMx-UA-9lh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="oyc-Wd-AQM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="swx-fV-slE" secondAttribute="trailing" constant="40" id="smn-nJ-Lb7"/>
                             <constraint firstItem="w59-mN-3og" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="xVB-mW-rgC"/>
                             <constraint firstItem="e5H-MZ-Xvk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="zRo-yw-FC5"/>
+                            <constraint firstItem="swx-fV-slE" firstAttribute="leading" secondItem="w59-mN-3og" secondAttribute="trailing" constant="15" id="ztF-eY-Law"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="currentScoreUITextField" destination="Gyo-a2-5Y1" id="czR-jQ-JYs"/>
                         <outlet property="gaugeView" destination="HG8-lk-Qet" id="W2L-Yf-0Ve"/>
+                        <outlet property="numChoicesUITextField" destination="swx-fV-slE" id="EIf-xa-0Wz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
