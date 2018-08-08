@@ -10,6 +10,7 @@ import Foundation
 
 class DailyChoices {
     var choices: [Int] = [0]
+    //var numChoices = choices.count
     
     func goodChoice() {
         choices.append(1)

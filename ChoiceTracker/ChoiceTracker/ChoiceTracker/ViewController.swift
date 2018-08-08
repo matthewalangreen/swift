@@ -13,9 +13,10 @@ class ViewController: UIViewController {
     
 
     //MARK:- Outlets
-    @IBOutlet var choiceCountTextLabel: UITextField!
+
     @IBOutlet var gaugeView: ABGaugeView!
-    
+   
+
     //MARK:- Actions
     @IBAction func addGoodChoice(_ sender: Any) {
         incrementChoice(choice: "Good")
@@ -31,7 +32,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        choiceCountTextLabel.text = String(testChoices.sum())
+        //choiceCountTextLabel.text = String(testChoices.sum())
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,7 +42,8 @@ class ViewController: UIViewController {
     
     //MARK:- UI Logic
     func updateUI() {
-        choiceCountTextLabel.text = String(testChoices.sum())
+        //choiceCountTextLabel.text = String(testChoices.sum())
+        
         updateGauge()
         self.view.setNeedsDisplay()
     }
