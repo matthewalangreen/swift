@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import ABGaugeViewKit
 
 class ViewController: UIViewController {
+    
 
     //MARK:- Outlets
-    @IBOutlet var choiceCountTextLabel: UITextField!
+    @IBOutlet var numChoicesUITextField: UITextField!
+    @IBOutlet var numGoodChoicesUITextField: UITextField!
+    @IBOutlet var numBadChoicesUITextField: UITextField!
+    @IBOutlet var currentScoreUITextField: UITextField!
+    @IBOutlet var gaugeView: ABGaugeView!
     
+
     //MARK:- Actions
     @IBAction func addGoodChoice(_ sender: Any) {
         incrementChoice(choice: "Good")
@@ -28,7 +35,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        choiceCountTextLabel.text = String(choiceCount)
+        //choiceCountTextLabel.text = String(testChoices.sum())
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,18 +45,19 @@ class ViewController: UIViewController {
     
     //MARK:- UI Logic
     func updateUI() {
-        choiceCountTextLabel.text = String(choiceCount)
-        colorCounter()
+        currentScoreUITextField.text = String(testChoices.sum())
+        numChoicesUITextField.text = String(testChoices.numChoices())
+        numGoodChoicesUITextField.text = String(testChoices.numGoodChoices())
+        numBadChoicesUITextField.text = String(testChoices.numBadChoices())
+        updateGauge()
         self.view.setNeedsDisplay()
     }
     
-    func colorCounter() {
-        if choiceCount >= 0 {
-           choiceCountTextLabel.textColor = UIColor.green
-        } else {
-           choiceCountTextLabel.textColor = UIColor.red
-        }
+    func updateGauge() {
+       // gaugeView.needleValue = CGFloat(gaugeValue)
+        gaugeView.needleValue = CGFloat(calculatedGaugeValue())
     }
     
+
 }
 

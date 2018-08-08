@@ -140,9 +140,16 @@ public class ABGaugeView: UIView {
         layer.addSublayer(shadowLayer)
         layer.addSublayer(triangleLayer)
         
-        animate(triangleLayer: triangleLayer, shadowLayer: shadowLayer, fromValue: 0, toValue: needleValue+10, duration: 0.5) {
-            self.animate(triangleLayer: triangleLayer, shadowLayer: shadowLayer, fromValue: self.needleValue+10, toValue: self.needleValue-10, duration: 0.4, callBack: {
-                self.animate(triangleLayer: triangleLayer, shadowLayer: shadowLayer, fromValue: self.needleValue-10, toValue: self.needleValue, duration: 0.6, callBack: {})
+//        animate(triangleLayer: triangleLayer, shadowLayer: shadowLayer, fromValue: 0, toValue: needleValue+10, duration: 0.5) {
+//            self.animate(triangleLayer: triangleLayer, shadowLayer: shadowLayer, fromValue: self.needleValue+10, toValue: self.needleValue-10, duration: 0.4, callBack: {
+//                self.animate(triangleLayer: triangleLayer, shadowLayer: shadowLayer, fromValue: self.needleValue-10, toValue: self.needleValue, duration: 0.6, callBack: {})
+//            })
+//        }
+        
+        //MARK: Matt's Edits
+        animate(triangleLayer: triangleLayer, shadowLayer: shadowLayer, fromValue: needleValue-1, toValue: needleValue+1, duration: 0.2) {
+            self.animate(triangleLayer: triangleLayer, shadowLayer: shadowLayer, fromValue: self.needleValue+1, toValue: self.needleValue-1, duration: 0.1, callBack: {
+                self.animate(triangleLayer: triangleLayer, shadowLayer: shadowLayer, fromValue: self.needleValue-1, toValue: self.needleValue, duration: 0.2, callBack: {})
             })
         }
     }

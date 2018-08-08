@@ -6,5 +6,6 @@ target 'ChoiceTracker' do
   use_frameworks!
 
   # Pods for ChoiceTracker
-      pod 'ABGaugeViewKit'
+       pod 'ABGaugeViewKit'
+
 end

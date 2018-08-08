@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6FBC1CB475FB29F04134D850 /* Pods_ChoiceTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182C2DF6640E637110A1B092 /* Pods_ChoiceTracker.framework */; };
+		468F30F9227783E17D043D35 /* Pods_ChoiceTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12F4E434FC4FCFF217D06730 /* Pods_ChoiceTracker.framework */; };
 		D0022ED2211B5D550080D089 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0022ED1211B5D550080D089 /* AppDelegate.swift */; };
 		D0022ED4211B5D550080D089 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0022ED3211B5D550080D089 /* ViewController.swift */; };
 		D0022ED7211B5D550080D089 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0022ED5211B5D550080D089 /* Main.storyboard */; };
@@ -15,12 +15,13 @@
 		D0022EDC211B5D560080D089 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0022EDA211B5D560080D089 /* LaunchScreen.storyboard */; };
 		D0022EE4211B5F4B0080D089 /* ChoiceLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0022EE3211B5F4B0080D089 /* ChoiceLogic.swift */; };
 		D0022EE6211B62430080D089 /* ChoiceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0022EE5211B62430080D089 /* ChoiceData.swift */; };
+		D0047B7E211B95FF00D7A583 /* ChoiceGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0047B7D211B95FF00D7A583 /* ChoiceGauge.swift */; };
+		D0785AD8211B9069002615EF /* DailyChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0785AD7211B9069002615EF /* DailyChoices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1447614C20EC8CC6A0DBE530 /* Pods-ChoiceTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoiceTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChoiceTracker/Pods-ChoiceTracker.release.xcconfig"; sourceTree = "<group>"; };
-		182C2DF6640E637110A1B092 /* Pods_ChoiceTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChoiceTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		80EC818517FC02F81B59BE55 /* Pods-ChoiceTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoiceTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChoiceTracker/Pods-ChoiceTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		08410C41942A2987D7D1A8AC /* Pods-ChoiceTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoiceTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChoiceTracker/Pods-ChoiceTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		12F4E434FC4FCFF217D06730 /* Pods_ChoiceTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChoiceTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0022ECE211B5D550080D089 /* ChoiceTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChoiceTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0022ED1211B5D550080D089 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0022ED3211B5D550080D089 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +31,9 @@
 		D0022EDD211B5D560080D089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0022EE3211B5F4B0080D089 /* ChoiceLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceLogic.swift; sourceTree = "<group>"; };
 		D0022EE5211B62430080D089 /* ChoiceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceData.swift; sourceTree = "<group>"; };
+		D0047B7D211B95FF00D7A583 /* ChoiceGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceGauge.swift; sourceTree = "<group>"; };
+		D0785AD7211B9069002615EF /* DailyChoices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChoices.swift; sourceTree = "<group>"; };
+		EA922F0D04CD0FF5CA47B6A3 /* Pods-ChoiceTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoiceTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChoiceTracker/Pods-ChoiceTracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,28 +41,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FBC1CB475FB29F04134D850 /* Pods_ChoiceTracker.framework in Frameworks */,
+				468F30F9227783E17D043D35 /* Pods_ChoiceTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		25BA6073D893C71703EC55C6 /* Frameworks */ = {
+		8071BF3270C48EAFB64D0A32 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				182C2DF6640E637110A1B092 /* Pods_ChoiceTracker.framework */,
+				12F4E434FC4FCFF217D06730 /* Pods_ChoiceTracker.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AE5AF98215DF3F662AFBA9F6 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				80EC818517FC02F81B59BE55 /* Pods-ChoiceTracker.debug.xcconfig */,
-				1447614C20EC8CC6A0DBE530 /* Pods-ChoiceTracker.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		D0022EC5211B5D550080D089 = {
@@ -66,8 +61,8 @@
 			children = (
 				D0022ED0211B5D550080D089 /* ChoiceTracker */,
 				D0022ECF211B5D550080D089 /* Products */,
-				AE5AF98215DF3F662AFBA9F6 /* Pods */,
-				25BA6073D893C71703EC55C6 /* Frameworks */,
+				D399CF4F9A0982E4618F08A3 /* Pods */,
+				8071BF3270C48EAFB64D0A32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,16 +77,51 @@
 		D0022ED0211B5D550080D089 /* ChoiceTracker */ = {
 			isa = PBXGroup;
 			children = (
+				D0047B81211B969B00D7A583 /* Data Types */,
 				D0022ED1211B5D550080D089 /* AppDelegate.swift */,
 				D0022ED3211B5D550080D089 /* ViewController.swift */,
-				D0022EE3211B5F4B0080D089 /* ChoiceLogic.swift */,
+				D0047B82211B96B900D7A583 /* Logic */,
 				D0022ED5211B5D550080D089 /* Main.storyboard */,
-				D0022EE5211B62430080D089 /* ChoiceData.swift */,
+				D0047B80211B968600D7A583 /* Data */,
 				D0022ED8211B5D560080D089 /* Assets.xcassets */,
 				D0022EDA211B5D560080D089 /* LaunchScreen.storyboard */,
 				D0022EDD211B5D560080D089 /* Info.plist */,
 			);
 			path = ChoiceTracker;
+			sourceTree = "<group>";
+		};
+		D0047B80211B968600D7A583 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D0022EE5211B62430080D089 /* ChoiceData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D0047B81211B969B00D7A583 /* Data Types */ = {
+			isa = PBXGroup;
+			children = (
+				D0785AD7211B9069002615EF /* DailyChoices.swift */,
+			);
+			path = "Data Types";
+			sourceTree = "<group>";
+		};
+		D0047B82211B96B900D7A583 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				D0022EE3211B5F4B0080D089 /* ChoiceLogic.swift */,
+				D0047B7D211B95FF00D7A583 /* ChoiceGauge.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		D399CF4F9A0982E4618F08A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				08410C41942A2987D7D1A8AC /* Pods-ChoiceTracker.debug.xcconfig */,
+				EA922F0D04CD0FF5CA47B6A3 /* Pods-ChoiceTracker.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,11 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0022EE0211B5D560080D089 /* Build configuration list for PBXNativeTarget "ChoiceTracker" */;
 			buildPhases = (
-				C76E71B21D65BD34674A8ECF /* [CP] Check Pods Manifest.lock */,
+				E7E98737733311191E42A3A0 /* [CP] Check Pods Manifest.lock */,
 				D0022ECA211B5D550080D089 /* Sources */,
 				D0022ECB211B5D550080D089 /* Frameworks */,
 				D0022ECC211B5D550080D089 /* Resources */,
-				809DE20A211D6D080B662DDC /* [CP] Embed Pods Frameworks */,
+				639CF0F67EFA24A134BB2FE6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,7 +193,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		809DE20A211D6D080B662DDC /* [CP] Embed Pods Frameworks */ = {
+		639CF0F67EFA24A134BB2FE6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -181,7 +211,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChoiceTracker/Pods-ChoiceTracker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C76E71B21D65BD34674A8ECF /* [CP] Check Pods Manifest.lock */ = {
+		E7E98737733311191E42A3A0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -206,7 +236,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0047B7E211B95FF00D7A583 /* ChoiceGauge.swift in Sources */,
 				D0022EE6211B62430080D089 /* ChoiceData.swift in Sources */,
+				D0785AD8211B9069002615EF /* DailyChoices.swift in Sources */,
 				D0022ED4211B5D550080D089 /* ViewController.swift in Sources */,
 				D0022ED2211B5D550080D089 /* AppDelegate.swift in Sources */,
 				D0022EE4211B5F4B0080D089 /* ChoiceLogic.swift in Sources */,
@@ -351,7 +383,7 @@
 		};
 		D0022EE1211B5D560080D089 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80EC818517FC02F81B59BE55 /* Pods-ChoiceTracker.debug.xcconfig */;
+			baseConfigurationReference = 08410C41942A2987D7D1A8AC /* Pods-ChoiceTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -370,7 +402,7 @@
 		};
 		D0022EE2211B5D560080D089 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1447614C20EC8CC6A0DBE530 /* Pods-ChoiceTracker.release.xcconfig */;
+			baseConfigurationReference = EA922F0D04CD0FF5CA47B6A3 /* Pods-ChoiceTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
