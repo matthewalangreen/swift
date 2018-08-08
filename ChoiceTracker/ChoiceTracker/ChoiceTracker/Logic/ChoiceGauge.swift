@@ -9,3 +9,8 @@
 import Foundation
 
 var gaugeValue: Int = 50
+
+func calculatedGaugeValue() -> Int {
+    
+    return 0
+}

@@ -52,7 +52,8 @@ class ViewController: UIViewController {
     }
     
     func updateGauge() {
-        gaugeView.needleValue = CGFloat(gaugeValue)
+       // gaugeView.needleValue = CGFloat(gaugeValue)
+        gaugeView.needleValue = CGFloat(calculatedGaugeValue())
     }
     
 

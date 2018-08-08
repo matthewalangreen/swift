@@ -30,5 +30,31 @@ class DailyChoices {
         return r
     }
     
+    func numGoodChoices() -> Int {
+        var count = 0
+        for item in choices {
+            if item == 1 {
+                count += 1
+            }
+        }
+        return count
+    }
+    
+    func numBadChoices() -> Int {
+        var count = 0
+        for item in choices {
+            if item == -1 {
+                count += 1
+            }
+        }
+        return count
+    }
+    
+//    func percentage() -> Float {
+//        let r =
+//
+//        return r
+//    }
+    
     
 }
