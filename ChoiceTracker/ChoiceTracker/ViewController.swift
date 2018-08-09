@@ -45,10 +45,10 @@ class ViewController: UIViewController {
     
     //MARK:- UI Logic
     func updateUI() {
-        currentScoreUITextField.text = String(testChoices.sum())
-        numChoicesUITextField.text = String(testChoices.numChoices())
-        numGoodChoicesUITextField.text = String(testChoices.numGoodChoices())
-        numBadChoicesUITextField.text = String(testChoices.numBadChoices())
+        currentScoreUITextField.text = String(testChoices.sum)
+        numChoicesUITextField.text = String(testChoices.numAllChoices)
+        numGoodChoicesUITextField.text = String(testChoices.numGoodChoices)
+        numBadChoicesUITextField.text = String(testChoices.numBadChoices)
         updateGauge()
         self.view.setNeedsDisplay()
     }

@@ -137,7 +137,7 @@ public class ABGaugeView: UIView {
         shadowLayer.fillColor = UIColor.lightGray.withAlphaComponent(0.1).cgColor
         
         // 6
-        layer.addSublayer(shadowLayer)
+       // layer.addSublayer(shadowLayer)
         layer.addSublayer(triangleLayer)
         
 //        animate(triangleLayer: triangleLayer, shadowLayer: shadowLayer, fromValue: 0, toValue: needleValue+10, duration: 0.5) {
