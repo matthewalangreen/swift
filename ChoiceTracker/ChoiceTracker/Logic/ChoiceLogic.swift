@@ -14,9 +14,13 @@ public func incrementChoice(choice: String) {
     
     switch choice {
     case "Good":
-        choiceCount += 1
+        //choices.append(1)
+        testChoices.goodChoice()
+        gaugeValue += 5
     case "Bad":
-        choiceCount -= 1
+        //choices.append(-1)
+        testChoices.badChoice()
+        gaugeValue -= 5
     default:
         print("not a valid choice")
     }
