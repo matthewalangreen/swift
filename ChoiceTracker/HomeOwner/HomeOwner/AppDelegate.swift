@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  ChoiceTracker
+//  Homeowner
 //
-//  Created by Matt Green on 8/8/18.
+//  Created by Matt Green on 8/9/18.
 //  Copyright © 2018 Matt Green. All rights reserved.
 //
 
@@ -12,16 +12,10 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let dailyRecordStore = DailyRecordStore()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        // access the view controller and set its dailyRecordScore
-        let vc = window!.rootViewController as! ViewController
-        vc.dailyRecordStore = dailyRecordStore
-        
         return true
     }
 
@@ -33,13 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-        
-        let success = dailyRecordStore.saveChanges()
-        if (success) {
-            print("Saved all of the items")
-        } else {
-            print("could not save any of the items")
-        }
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {

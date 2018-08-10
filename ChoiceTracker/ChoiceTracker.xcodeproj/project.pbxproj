@@ -13,10 +13,8 @@
 		D0022ED7211B5D550080D089 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0022ED5211B5D550080D089 /* Main.storyboard */; };
 		D0022ED9211B5D560080D089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0022ED8211B5D560080D089 /* Assets.xcassets */; };
 		D0022EDC211B5D560080D089 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0022EDA211B5D560080D089 /* LaunchScreen.storyboard */; };
-		D0022EE4211B5F4B0080D089 /* ChoiceLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0022EE3211B5F4B0080D089 /* ChoiceLogic.swift */; };
-		D0022EE6211B62430080D089 /* ChoiceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0022EE5211B62430080D089 /* ChoiceData.swift */; };
-		D0047B7E211B95FF00D7A583 /* ChoiceGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0047B7D211B95FF00D7A583 /* ChoiceGauge.swift */; };
-		D0785AD8211B9069002615EF /* DailyChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0785AD7211B9069002615EF /* DailyChoices.swift */; };
+		D0785AD8211B9069002615EF /* DailyRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0785AD7211B9069002615EF /* DailyRecord.swift */; };
+		D0ABD0AB211D4ACA009816BE /* DailyRecordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ABD0AA211D4ACA009816BE /* DailyRecordStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,10 +27,8 @@
 		D0022ED8211B5D560080D089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0022EDB211B5D560080D089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0022EDD211B5D560080D089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0022EE3211B5F4B0080D089 /* ChoiceLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceLogic.swift; sourceTree = "<group>"; };
-		D0022EE5211B62430080D089 /* ChoiceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceData.swift; sourceTree = "<group>"; };
-		D0047B7D211B95FF00D7A583 /* ChoiceGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceGauge.swift; sourceTree = "<group>"; };
-		D0785AD7211B9069002615EF /* DailyChoices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChoices.swift; sourceTree = "<group>"; };
+		D0785AD7211B9069002615EF /* DailyRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyRecord.swift; sourceTree = "<group>"; };
+		D0ABD0AA211D4ACA009816BE /* DailyRecordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyRecordStore.swift; sourceTree = "<group>"; };
 		EA922F0D04CD0FF5CA47B6A3 /* Pods-ChoiceTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoiceTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChoiceTracker/Pods-ChoiceTracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,42 +73,16 @@
 		D0022ED0211B5D550080D089 /* ChoiceTracker */ = {
 			isa = PBXGroup;
 			children = (
-				D0047B81211B969B00D7A583 /* Data Types */,
+				D0785AD7211B9069002615EF /* DailyRecord.swift */,
+				D0ABD0AA211D4ACA009816BE /* DailyRecordStore.swift */,
 				D0022ED1211B5D550080D089 /* AppDelegate.swift */,
 				D0022ED3211B5D550080D089 /* ViewController.swift */,
-				D0047B82211B96B900D7A583 /* Logic */,
 				D0022ED5211B5D550080D089 /* Main.storyboard */,
-				D0047B80211B968600D7A583 /* Data */,
 				D0022ED8211B5D560080D089 /* Assets.xcassets */,
 				D0022EDA211B5D560080D089 /* LaunchScreen.storyboard */,
 				D0022EDD211B5D560080D089 /* Info.plist */,
 			);
 			path = ChoiceTracker;
-			sourceTree = "<group>";
-		};
-		D0047B80211B968600D7A583 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				D0022EE5211B62430080D089 /* ChoiceData.swift */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		D0047B81211B969B00D7A583 /* Data Types */ = {
-			isa = PBXGroup;
-			children = (
-				D0785AD7211B9069002615EF /* DailyChoices.swift */,
-			);
-			path = "Data Types";
-			sourceTree = "<group>";
-		};
-		D0047B82211B96B900D7A583 /* Logic */ = {
-			isa = PBXGroup;
-			children = (
-				D0022EE3211B5F4B0080D089 /* ChoiceLogic.swift */,
-				D0047B7D211B95FF00D7A583 /* ChoiceGauge.swift */,
-			);
-			path = Logic;
 			sourceTree = "<group>";
 		};
 		D399CF4F9A0982E4618F08A3 /* Pods */ = {
@@ -236,12 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0047B7E211B95FF00D7A583 /* ChoiceGauge.swift in Sources */,
-				D0022EE6211B62430080D089 /* ChoiceData.swift in Sources */,
-				D0785AD8211B9069002615EF /* DailyChoices.swift in Sources */,
+				D0785AD8211B9069002615EF /* DailyRecord.swift in Sources */,
+				D0ABD0AB211D4ACA009816BE /* DailyRecordStore.swift in Sources */,
 				D0022ED4211B5D550080D089 /* ViewController.swift in Sources */,
 				D0022ED2211B5D550080D089 /* AppDelegate.swift in Sources */,
-				D0022EE4211B5F4B0080D089 /* ChoiceLogic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

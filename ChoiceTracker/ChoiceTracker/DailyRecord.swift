@@ -1,28 +1,37 @@
 //
-//  DailyChoices.swift
+//  DailyRecord.swift
 //  ChoiceTracker
 //
 //  Created by Matt Green on 8/8/18.
 //  Copyright © 2018 Matt Green. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class DailyChoices: NSObject, NSCoding {
-    // NSCoding required methods
+class DailyRecord: NSObject, NSCoding {
+    
+    //MARK:- properties
+    var choices: [Int] = [0]
+    var date: Date = Date()
+    
+    //MARK:- init
+    override init() {
+        
+    }
+    
+    //MARK:- NSCoding required methods
     func encode(with aCoder: NSCoder) {
         aCoder.encode(choices, forKey: "choices")
+        aCoder.encode(date, forKey: "date")
     }
     
     required init(coder aDecoder: NSCoder) {
         choices = aDecoder.decodeObject(forKey: "choices") as! [Int]
+        date = aDecoder.decodeObject(forKey: "date") as! Date
         super.init()
     }
     
-    // properties
-    var choices: [Int] = [0]
-    
-    // computed properties
+    //MARK:- computed properties
     var sum: Int {
         return choices.reduce(0,+)
     }
@@ -57,7 +66,7 @@ class DailyChoices: NSObject, NSCoding {
     }
     
     
-    // setters
+    //MARK:- setters
     func goodChoice() {
         choices.append(1)
     }
@@ -65,6 +74,5 @@ class DailyChoices: NSObject, NSCoding {
     func badChoice() {
         choices.append(-1)
     }
-
 
 }
