@@ -41,10 +41,13 @@ class ViewController: UIViewController {
     
     @IBAction func addBadChoice(_ sender: Any) {
         incrementChoice(choice: "Bad")
+        print("Today's Date: \(currentDailyRecord.date)")
+        print(dailyRecordStore.allDailyRecords.keys)
         updateUI()
     }
     @IBAction func addDailyRecord(_ sender: Any) {
         dailyRecordStore.createRandomDailyRecord()
+        print("Today's Date: \(currentDailyRecord.date)")
     }
     
     //MARK:- Template
@@ -61,10 +64,10 @@ class ViewController: UIViewController {
     
     //MARK:- UI Logic
     func updateUI() {
-       // currentScoreUITextField.text = String(testChoices.sum)
-       // numChoicesUITextField.text = String(testChoices.numAllChoices)
-       // numGoodChoicesUITextField.text = String(testChoices.numGoodChoices)
-       // numBadChoicesUITextField.text = String(testChoices.numBadChoices)
+        currentScoreUITextField.text = String(currentDailyRecord.sum)
+        numChoicesUITextField.text = String(currentDailyRecord.numAllChoices)
+        numGoodChoicesUITextField.text = String(currentDailyRecord.numGoodChoices)
+        numBadChoicesUITextField.text = String(currentDailyRecord.numBadChoices)
         updateGauge()
         currentDailyRecord = getCurrentDailyRecord()
         self.view.setNeedsDisplay()
@@ -82,11 +85,11 @@ class ViewController: UIViewController {
         switch choice {
         case "Good":
             //choices.append(1)
-           // testChoices.goodChoice()
+            currentDailyRecord.goodChoice()
             gaugeValue += 5
         case "Bad":
             //choices.append(-1)
-            //testChoices.badChoice()
+            currentDailyRecord.badChoice()
             gaugeValue -= 5
         default:
             print("not a valid choice")
