@@ -30,6 +30,7 @@ class ViewController: UIViewController {
     @IBOutlet var numBadChoicesUITextField: UITextField!
     @IBOutlet var currentScoreUITextField: UITextField!
     @IBOutlet var gaugeView: ABGaugeView!
+    @IBOutlet var littleGaugeView: ABGaugeView!
     
 
     //MARK:- Actions
@@ -77,6 +78,8 @@ class ViewController: UIViewController {
     func updateGauge() {
         gaugeView.needleValue = CGFloat(gaugeValue)
         gaugeView.needleValue = CGFloat(calculatedGaugeValue())
+        littleGaugeView.needleValue = CGFloat(gaugeValue)
+        littleGaugeView.needleValue = CGFloat(calculatedGaugeValue())
     }
     
     //MARK:- Choice Logic

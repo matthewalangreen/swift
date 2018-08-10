@@ -111,7 +111,34 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Kd-fC-Wu8" customClass="ABGaugeView" customModule="ABGaugeViewKit">
+                                        <rect key="frame" x="27" y="-8" width="240" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="GVu-ni-5gf"/>
+                                            <constraint firstAttribute="height" constant="50" id="c01-ys-5bp"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                                <color key="value" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                                <color key="value" red="0.33078351360000002" green="1" blue="0.44553283809999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="firstArea">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="secondArea">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="4Kd-fC-Wu8" secondAttribute="bottom" id="HQB-xC-0S9"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Kd-fC-Wu8" secondAttribute="trailing" id="kMc-5y-tz2"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Kd-fC-Wu8" secondAttribute="bottom" id="pHU-k5-eCl"/>
+                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5M-ay-BWc">
                                 <rect key="frame" x="172" y="576" width="31" height="30"/>
@@ -162,6 +189,7 @@
                     <connections>
                         <outlet property="currentScoreUITextField" destination="Gyo-a2-5Y1" id="czR-jQ-JYs"/>
                         <outlet property="gaugeView" destination="bo3-Ap-N4g" id="LsI-kl-dCL"/>
+                        <outlet property="littleGaugeView" destination="4Kd-fC-Wu8" id="GQz-Sz-BAT"/>
                         <outlet property="numBadChoicesUITextField" destination="P3V-Rm-n1b" id="Xkm-Nc-jhM"/>
                         <outlet property="numChoicesUITextField" destination="swx-fV-slE" id="EIf-xa-0Wz"/>
                         <outlet property="numGoodChoicesUITextField" destination="uUm-sA-sl2" id="Lrm-Tq-XkL"/>
