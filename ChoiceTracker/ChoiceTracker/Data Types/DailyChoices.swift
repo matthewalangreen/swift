@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DailyChoices {
+class DailyChoices: NSObject {
     var choices: [Int] = [0]
     
     // computed properties

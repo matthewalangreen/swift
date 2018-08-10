@@ -10,9 +10,9 @@ import Foundation
 
 // keep track of choices. "-1" for bad choice "1" for good choice
 // this would be a great format if it works!
-var dataDictionary: Dictionary = [Date:DailyChoices]()
-let today = Date.init()
-let todaysChoices = DailyChoices()
-dataDictionary[today] = todaysChoices.init()
+//var dataDictionary: Dictionary = [Date:DailyChoices]()
+//let today = Date.init()
+//let todaysChoices = DailyChoices()
+//dataDictionary[today] = todaysChoices.init()
 var testChoices = DailyChoices()
 
