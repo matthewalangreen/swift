@@ -60,8 +60,16 @@ class DailyRecord: NSObject, NSCoding {
         return count
     }
     
+    // optional binding to catch the potential for no value for gauge when we haven't recorded data yet
     var choicePercentage: Float {
-        let ratio = Float(numGoodChoices) / Float(numAllChoices)
+        var ratio: Float = 0
+        let num = Float(numGoodChoices)
+        let denom = Float(numAllChoices)
+        if(denom == 0) {
+            ratio = 0
+        } else {
+            ratio = num / denom
+        }
         return ratio
     }
     

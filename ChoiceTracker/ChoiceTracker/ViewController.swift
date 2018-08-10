@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     @IBOutlet var numGoodChoicesUITextField: UITextField!
     @IBOutlet var numBadChoicesUITextField: UITextField!
     @IBOutlet var currentScoreUITextField: UITextField!
-   // @IBOutlet var gaugeView: ABGaugeView!
+    @IBOutlet var gaugeView: ABGaugeView!
     
 
     //MARK:- Actions
@@ -55,6 +55,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         currentDailyRecord = getCurrentDailyRecord()
+        updateUI()
     }
     
     override func didReceiveMemoryWarning() {
@@ -74,8 +75,8 @@ class ViewController: UIViewController {
     }
     
     func updateGauge() {
-       // gaugeView.needleValue = CGFloat(gaugeValue)
-       // gaugeView.needleValue = CGFloat(calculatedGaugeValue())
+        gaugeView.needleValue = CGFloat(gaugeValue)
+        gaugeView.needleValue = CGFloat(calculatedGaugeValue())
     }
     
     //MARK:- Choice Logic
@@ -84,11 +85,9 @@ class ViewController: UIViewController {
         
         switch choice {
         case "Good":
-            //choices.append(1)
             currentDailyRecord.goodChoice()
             gaugeValue += 5
         case "Bad":
-            //choices.append(-1)
             currentDailyRecord.badChoice()
             gaugeValue -= 5
         default:
@@ -101,9 +100,8 @@ class ViewController: UIViewController {
     var gaugeValue: Int = 50
     
     func calculatedGaugeValue() -> Int {
-        //let amount = Int(testChoices.choicePercentage * 100)
-        //return amount
-        return 50
+        let amount = Int(currentDailyRecord.choicePercentage * 100)
+        return amount
     }
     
     //MARK:- Daily Record stuff
