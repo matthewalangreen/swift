@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let dailyRecordStore = DailyRecordStore()
+    let currentDailyRecord = DailyRecord()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -21,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // access the view controller and set its dailyRecordScore
         let vc = window!.rootViewController as! ViewController
         vc.dailyRecordStore = dailyRecordStore
+        vc.currentDailyRecord = currentDailyRecord
         
         return true
     }

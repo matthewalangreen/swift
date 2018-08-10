@@ -9,10 +9,20 @@
 import UIKit
 import ABGaugeViewKit
 
+
 class ViewController: UIViewController {
+    // dateFormatter
+    let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        formatter.locale = Locale(identifier: "en_US")
+        return formatter
+    }()
+    
     // model stuff
     var dailyRecordStore: DailyRecordStore!
-    
+    var currentDailyRecord: DailyRecord!
 
     //MARK:- Outlets
     @IBOutlet var numChoicesUITextField: UITextField!
@@ -34,14 +44,14 @@ class ViewController: UIViewController {
         updateUI()
     }
     @IBAction func addDailyRecord(_ sender: Any) {
-        dailyRecordStore.createDailyRecord()
+        dailyRecordStore.createRandomDailyRecord()
     }
     
     //MARK:- Template
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //choiceCountTextLabel.text = String(testChoices.sum())
+        currentDailyRecord = getCurrentDailyRecord()
     }
     
     override func didReceiveMemoryWarning() {
@@ -56,6 +66,7 @@ class ViewController: UIViewController {
        // numGoodChoicesUITextField.text = String(testChoices.numGoodChoices)
        // numBadChoicesUITextField.text = String(testChoices.numBadChoices)
         updateGauge()
+        currentDailyRecord = getCurrentDailyRecord()
         self.view.setNeedsDisplay()
     }
     
@@ -90,6 +101,22 @@ class ViewController: UIViewController {
         //let amount = Int(testChoices.choicePercentage * 100)
         //return amount
         return 50
+    }
+    
+    //MARK:- Daily Record stuff
+    func doesRecordExist(day: String) -> Bool {
+        return dailyRecordStore.allDailyRecords.keys.contains(day)
+    }
+    
+    func getCurrentDailyRecord() -> DailyRecord {
+        let today = dateFormatter.string(from: Date.init())
+        // check allDailyRecords for today, if today exists return
+        if (doesRecordExist(day: today)) {
+            return dailyRecordStore.allDailyRecords[today]! // eew
+        } else {
+            // if today doesn't exist, make it and return it.
+            return dailyRecordStore.createDailyRecord()
+        }
     }
 
 }
