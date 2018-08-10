@@ -14,5 +14,23 @@ import Foundation
 //let today = Date.init()
 //let todaysChoices = DailyChoices()
 //dataDictionary[today] = todaysChoices.init()
-var testChoices = DailyChoices()
+//var testChoices = DailyChoices()
+
+class ChoiceData {
+    
+    var allChoices: [DailyChoices] = []
+    
+    let choicesArchiveURL: URL = {
+        let documentsDirectories = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentDirectory = documentsDirectories.first!
+        return documentDirectory.appendingPathComponent("DailyChoices.archive")
+    }()
+    
+    // methods
+    func saveChages() -> Bool {
+        print("saving items to \(choicesArchiveURL.path)")
+        return NSKeyedArchiver.archiveRootObject(allChoices, toFile: choicesArchiveURL.path)
+    }
+}
+
 

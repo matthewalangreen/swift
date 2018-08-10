@@ -8,7 +8,18 @@
 
 import Foundation
 
-class DailyChoices: NSObject {
+class DailyChoices: NSObject, NSCoding {
+    // NSCoding required methods
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(choices, forKey: "choices")
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        choices = aDecoder.decodeObject(forKey: "choices") as! [Int]
+        super.init()
+    }
+    
+    // properties
     var choices: [Int] = [0]
     
     // computed properties
