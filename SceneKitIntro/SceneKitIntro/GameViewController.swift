@@ -92,7 +92,11 @@ class GameViewController: UIViewController {
         
         geometryNode.physicsBody?.applyForce(force, at: position, asImpulse: true) // immediately apply
         
-        geometry.materials.first?.diffuse.contents = UIColor.random()
+        let color = UIColor.random();
+        
+        geometry.materials.first?.diffuse.contents = color
+        let trailEmitter = createParticleTrail(color: color, geometry: geometry)
+        geometryNode.addParticleSystem(trailEmitter)
     }
     
     func cleanUp() {
@@ -101,7 +105,13 @@ class GameViewController: UIViewController {
                 node.removeFromParentNode()
             }
         }
-        
+    }
+    
+    func createParticleTrail(color: UIColor, geometry: SCNGeometry) -> SCNParticleSystem {
+        let trail = SCNParticleSystem(named: "Fire.scnp", inDirectory: nil)!
+        trail.particleColor = color
+        trail.emitterShape = geometry
+        return trail
     }
 }
 
