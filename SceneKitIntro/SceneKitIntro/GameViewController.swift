@@ -12,6 +12,7 @@ import SceneKit
 var scnView: SCNView!
 var scnScene: SCNScene!
 var cameraNode: SCNNode!
+var spawnTime: TimeInterval = 0
 
 class GameViewController: UIViewController {
 
@@ -20,7 +21,7 @@ class GameViewController: UIViewController {
         setupView()
         setupScene()
         setupCamera()
-        spawnShape()
+        //spawnShape()
     }
     
     override var shouldAutorotate: Bool {
@@ -35,6 +36,8 @@ class GameViewController: UIViewController {
         scnView = self.view as! SCNView
         scnView.allowsCameraControl = true
         scnView.autoenablesDefaultLighting = true
+        scnView.delegate = self
+        scnView.isPlaying = true // don't let it autopause if nothing is on screen
     }
     
     func setupScene() {
@@ -88,5 +91,29 @@ class GameViewController: UIViewController {
         let position = SCNVector3(x: 0.07, y: 0.07, z: 0.07) // just off-center to make it spin
         
         geometryNode.physicsBody?.applyForce(force, at: position, asImpulse: true) // immediately apply
+        
+        geometry.materials.first?.diffuse.contents = UIColor.random()
     }
+    
+    func cleanUp() {
+        for node in scnScene.rootNode.childNodes {
+            if node.presentation.position.y < -10 { // off the screen vertically
+                node.removeFromParentNode()
+            }
+        }
+        
+    }
+}
+
+extension GameViewController: SCNSceneRendererDelegate {
+    
+    func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
+        if time > spawnTime {
+            spawnShape()
+            
+            spawnTime = time + TimeInterval(Float.random(min: 0.3, max: 1.8))
+        }
+        cleanUp()
+    }
+    
 }
