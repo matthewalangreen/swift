@@ -34,7 +34,7 @@ class GameViewController: UIViewController {
     
     func setupView() {
         scnView = self.view as! SCNView
-        scnView.allowsCameraControl = true
+        scnView.allowsCameraControl = false
         scnView.autoenablesDefaultLighting = true
         scnView.delegate = self
         scnView.isPlaying = true // don't let it autopause if nothing is on screen
@@ -50,12 +50,32 @@ class GameViewController: UIViewController {
         let myScreenSize: CGRect = UIScreen.main.bounds
         let myScreenHeight = myScreenSize.height
         let cameraPosition = Float(myScreenHeight) * 0.01
-        
         cameraNode = SCNNode()
         cameraNode.camera = SCNCamera()
         cameraNode.position = SCNVector3(x: 0, y: cameraPosition, z: 15)
         scnScene.rootNode.addChildNode(cameraNode) // add camera node to scene
     }
+    
+    func handleTouch(node: SCNNode) {
+        if node.name == "notRed" {
+            node.removeFromParentNode()
+        } else {
+            /*
+            your code goes here to handle the case for node.name == "red"
+            */
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first!
+        let location = touch.location(in: scnView)
+        let hitResults = scnView.hitTest(location, options: nil)
+        if let result = hitResults.first {
+            handleTouch(node: result.node)
+        }
+    }
+    
+    
     
     func spawnShape() {
         var geometry: SCNGeometry
@@ -97,6 +117,12 @@ class GameViewController: UIViewController {
         geometry.materials.first?.diffuse.contents = color
         let trailEmitter = createParticleTrail(color: color, geometry: geometry)
         geometryNode.addParticleSystem(trailEmitter)
+        
+        if color == UIColor.red {
+            geometryNode.name = "red"
+        } else {
+            geometryNode.name = "notRed"
+        }
     }
     
     func cleanUp() {
