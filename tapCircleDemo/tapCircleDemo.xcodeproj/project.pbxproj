@@ -41,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A72490C1224AC83500C15491 /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				A7B57987224A97AA00C93873 /* GameScene.swift */,
+			);
+			path = Old;
+			sourceTree = "<group>";
+		};
 		A7F0BF722236FE94006D3D44 = {
 			isa = PBXGroup;
 			children = (
@@ -62,9 +70,9 @@
 			children = (
 				A7F0BF7E2236FE94006D3D44 /* AppDelegate.swift */,
 				A7F0BF922236FF74006D3D44 /* DotScene.swift */,
-				A7B57987224A97AA00C93873 /* GameScene.swift */,
 				A72490BF224AB07500C15491 /* ColorMixer.swift */,
 				A7F0BF902236FF26006D3D44 /* TouchDotViewController.swift */,
+				A72490C1224AC83500C15491 /* Old */,
 				A7F0BF822236FE94006D3D44 /* Main.storyboard */,
 				A7F0BF852236FE95006D3D44 /* Assets.xcassets */,
 				A7F0BF872236FE95006D3D44 /* LaunchScreen.storyboard */,
