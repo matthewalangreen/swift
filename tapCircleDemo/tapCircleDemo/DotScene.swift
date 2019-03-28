@@ -49,8 +49,16 @@ class DotScene: SKScene {
     }
 
     //MARK:- Touches
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        let touch = touches.first!
+//        print(touches.count)
+//        let location = touch.location(in: self)
+//        addDot(point: location)
+//    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first!
+        print(touches.count)
         let location = touch.location(in: self)
         addDot(point: location)
     }
