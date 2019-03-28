@@ -9,6 +9,14 @@
 import SpriteKit
 
 let colorMixer: ColorMixer = ColorMixer.init(colors: palette)
+let myGraph: PolarGraph = PolarGraph.init(aVals[2])
+
+let bounds = UIScreen.main.bounds
+let width = bounds.width
+let height = bounds.height
+let midX = width / 2
+let midY = height / 2
+
 var moving: Bool = true
 
 class DotScene: SKScene {
@@ -23,13 +31,14 @@ class DotScene: SKScene {
     
     func addDot(point: CGPoint) {
         let nextColor = colorMixer.mixColors(delta: 0.05)
-        let dotObject = Dot.init(firstPoint: point, dotColor: nextColor)
-        dotObject.fillColor = nextColor
-        dotObject.position = point
-        dotObject.lineWidth = 0
-        dots.append(dotObject)
-        addChild(dotObject)
-        print("new dot at \(dotObject.position)")
+        let dot = Dot.init(firstPoint: point, dotColor: nextColor)
+        dot.fillColor = nextColor
+        dot.position = point
+        dot.lineWidth = 0
+        dot.newLocation = myGraph.getNextVector()
+        dots.append(dot)
+        addChild(dot)
+        //print("new dot at \(dotObject.position)")
     }
     
     func cleanUp(_ dot: Dot) {
@@ -38,39 +47,28 @@ class DotScene: SKScene {
         }
     }
     
-    override func sceneDidLoad() {
-        let bounds = UIScreen.main.bounds
-        let width = bounds.width
-        let height = bounds.height
-        let midX = width / 2
-        let midY = height / 2
-        let firstDot = Dot.init(firstPoint: CGPoint.init(x: midX, y: midY), dotColor: .white)        
-        addChild(firstDot)
-    }
+//    override func sceneDidLoad() {
+//        let firstDot = Dot.init(firstPoint: CGPoint.init(x: midX, y: midY), dotColor: .white)
+//        addChild(firstDot)
+//    }
 
     //MARK:- Touches
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        let touch = touches.first!
-//        print(touches.count)
-//        let location = touch.location(in: self)
-//        addDot(point: location)
-//    }
-    
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first!
-        print(touches.count)
+        //print(touches.count)
         let location = touch.location(in: self)
-        addDot(point: location)
+        for _ in 0...3 { addDot(point: location) }
+       
     }
     
     //MARK:- Override
     override func update(_ currentTime: TimeInterval) {
        // let bounds = UIScreen.m
-        let centerPointVector = CGVector.init(dx: 0, dy: 0)
+        //let centerPointVector = CGVector.init(dx: midX, dy: midY)
         
         for dot in dots {
             if(moving) {
-                dot.arrive(centerPointVector)
+                dot.arrive(dot.newLocation)
             }
             dot.applyPhysics()
             dot.pulse()

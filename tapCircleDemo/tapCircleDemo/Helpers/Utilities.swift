@@ -13,9 +13,17 @@ func colorMixFunction(_ input: CGFloat) -> CGFloat {
 }
 
 func lerpColor(_ first: color, _ second: color, _ amount: CGFloat) -> UIColor {
-    let r = (1.0 - amount) * first.red + amount * second.red
-    let g = (1.0 - amount) * first.green + amount * second.green
-    let b = (1.0 - amount) * first.blue + amount * second.blue
+    var r = (1.0 - amount) * first.red + amount * second.red
+    var g = (1.0 - amount) * first.green + amount * second.green
+    var b = (1.0 - amount) * first.blue + amount * second.blue
+    
+    if (r < 0) { r = 0 }
+    if (r > 1) { r = 1 }
+    if (g < 0) { g = 0 }
+    if (g > 1) { g = 1 }
+    if (b < 0) { b = 0 }
+    if (b > 1) { b = 1 }
+    
     return UIColor(red: r, green: g, blue: b, alpha: 1.0)
 }
 

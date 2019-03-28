@@ -12,6 +12,7 @@
 		A72490DE224AD74300C15491 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72490DD224AD74300C15491 /* Utilities.swift */; };
 		A7249100224AE63500C15491 /* CGVectorAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72490FE224AE63500C15491 /* CGVectorAwesome.swift */; };
 		A7B26198224D5304005A40AC /* header.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B26197224D5304005A40AC /* header.swift */; };
+		A7B2619A224D67A1005A40AC /* PolarGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B26199224D67A1005A40AC /* PolarGraph.swift */; };
 		A7F0BF7F2236FE94006D3D44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F0BF7E2236FE94006D3D44 /* AppDelegate.swift */; };
 		A7F0BF842236FE94006D3D44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7F0BF822236FE94006D3D44 /* Main.storyboard */; };
 		A7F0BF862236FE95006D3D44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7F0BF852236FE95006D3D44 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		A72490DD224AD74300C15491 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		A72490FE224AE63500C15491 /* CGVectorAwesome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGVectorAwesome.swift; sourceTree = "<group>"; };
 		A7B26197224D5304005A40AC /* header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = header.swift; sourceTree = "<group>"; };
+		A7B26199224D67A1005A40AC /* PolarGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarGraph.swift; sourceTree = "<group>"; };
 		A7F0BF7B2236FE94006D3D44 /* tapCircleDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tapCircleDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F0BF7E2236FE94006D3D44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7F0BF832236FE94006D3D44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 		A7530509224B02D900164FC8 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A7B26199224D67A1005A40AC /* PolarGraph.swift */,
 				A72490C2224ACFCD00C15491 /* Dot.swift */,
 				A72490BF224AB07500C15491 /* ColorMixer.swift */,
 				A72490DD224AD74300C15491 /* Utilities.swift */,
@@ -176,6 +179,7 @@
 				A72490C0224AB07500C15491 /* ColorMixer.swift in Sources */,
 				A7F0BF912236FF26006D3D44 /* TouchDotViewController.swift in Sources */,
 				A72490DE224AD74300C15491 /* Utilities.swift in Sources */,
+				A7B2619A224D67A1005A40AC /* PolarGraph.swift in Sources */,
 				A72490C3224ACFCD00C15491 /* Dot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

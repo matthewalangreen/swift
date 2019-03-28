@@ -15,7 +15,7 @@ class Dot: SKShapeNode {
     // set in default init
     var velocity: CGVector = CGVector(dx: -11, dy: -11)
     var acceleration: CGVector = CGVector(dx: -11, dy: -11)
-    var radius: CGFloat = CGFloat(Int.random(in: 10 ..< 50))
+    var radius: CGFloat = CGFloat(Int.random(in: 2 ..< 18))
     var lifespan: CGFloat = CGFloat(Int.random(in: 300 ..< 500))
     var maxForce: CGFloat = 1.2 // 0.4 is default
     var maxSpeed: CGFloat = 16 // 7 is default
