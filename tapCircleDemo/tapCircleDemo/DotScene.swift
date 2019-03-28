@@ -15,6 +15,8 @@ class DotScene: SKScene {
     
     //let cameraNode = SKCameraNode()
     
+    
+    
     let colors = [SKColor.yellow, SKColor.red, SKColor.blue, SKColor.purple]
 
     var dots: [Dot] = []
@@ -27,13 +29,23 @@ class DotScene: SKScene {
         dotObject.lineWidth = 0
         dots.append(dotObject)
         addChild(dotObject)
-       // print("new dot at \(dotObject.position)")
+        print("new dot at \(dotObject.position)")
     }
     
     func cleanUp(_ dot: Dot) {
         if(dot.alpha < 0) {
             dot.removeFromParent()
         }
+    }
+    
+    override func sceneDidLoad() {
+        let bounds = UIScreen.main.bounds
+        let width = bounds.width
+        let height = bounds.height
+        let midX = width / 2
+        let midY = height / 2
+        let firstDot = Dot.init(firstPoint: CGPoint.init(x: midX, y: midY), dotColor: .white)        
+        addChild(firstDot)
     }
 
     //MARK:- Touches
@@ -45,8 +57,8 @@ class DotScene: SKScene {
     
     //MARK:- Override
     override func update(_ currentTime: TimeInterval) {
-        let bounds = UIScreen.main.bounds
-        let centerPointVector = CGVector.init(dx: bounds.width/2, dy: bounds.height/2)
+       // let bounds = UIScreen.m
+        let centerPointVector = CGVector.init(dx: 0, dy: 0)
         
         for dot in dots {
             if(moving) {

@@ -42,6 +42,7 @@ class Dot: SKShapeNode {
         self.position = firstPoint
         self.newLocation = location
         self.dotColor = dotColor
+        self.fillColor = dotColor
     }
     
     required init?(coder aDecoder: NSCoder) {
