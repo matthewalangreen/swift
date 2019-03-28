@@ -9,6 +9,7 @@
 import SpriteKit
 
 let colorMixer: ColorMixer = ColorMixer.init(colors: palette)
+var moving: Bool = true
 
 class DotScene: SKScene {
     
@@ -44,7 +45,14 @@ class DotScene: SKScene {
     
     //MARK:- Override
     override func update(_ currentTime: TimeInterval) {
+        let bounds = UIScreen.main.bounds
+        let centerPointVector = CGVector.init(dx: bounds.width/2, dy: bounds.height/2)
+        
         for dot in dots {
+            if(moving) {
+                dot.arrive(centerPointVector)
+            }
+            dot.applyPhysics()
             dot.pulse()
             dot.age()
             cleanUp(dot)

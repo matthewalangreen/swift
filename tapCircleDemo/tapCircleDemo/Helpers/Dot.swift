@@ -67,17 +67,18 @@ class Dot: SKShapeNode {
         self.alpha = relSpan
     }
     
+    //MARK:- My Physics Stuff
+    
     func applyForce(_ force: CGVector) {
         acceleration = acceleration.sum(force)
     }
     
-    func seek(target: CGVector) {
-        var desired: CGVector = target.difference(location)
-        desired = desired.normalize()
-        desired = desired.multiply(maxSpeed)
-        let steer: CGVector = desired.difference(velocity)
-        // steer.limit(maxForce)
-        applyForce(steer)
+    func applyPhysics() {
+        self.velocity = velocity.sum(acceleration)
+        //velocity.limit(maxSpeed);
+        self.location = location.sum(velocity);
+        self.acceleration = acceleration.multiply(0);
+        self.position = CGPoint.init(x: self.location.dx, y: self.location.dy)
     }
     
     func arrive(_ target: CGVector) {
@@ -97,46 +98,5 @@ class Dot: SKShapeNode {
         applyForce(steer)
     }
     
-    //MARK: TODO -- Do we need these getter/setters?
-    //    func getMaxSpeed() -> CGFloat {
-    //        return maxSpeed
-    //    }
-    //
-    //    func getMaxForce() -> CGFloat {
-    //        return maxForce
-    //    }
-    //
-    //    func increaseMaxSpeed() {
-    //        maxSpeed += 0.25
-    //    }
-    //
-    //    func decreaseMaxSpeed() {
-    //        maxSpeed -= 0.25
-    //    }
-    //
-    //    func increaseMaxForce() {
-    //        maxForce += 0.25
-    //    }
-    //
-    //    func decreaseMaxForce() {
-    //        maxForce -= 0.25
-    //    }
-    //
-    //    func getNewLocation() -> CGVector {
-    //        return newLocation
-    //    }
-    //
-    //    func setNewLocation(x: CGFloat, y: CGFloat) {
-    //        newLocation = CGVector(dx: x, dy: y)
-    //    }
-    //
-    //    func getFirstPoint() -> CGPoint {
-    //        return firstPoint
-    //    }
-    //
-    //    func getRadius() -> CGFloat {
-    //        return self.radius
-    //    }
-       
 }
 
