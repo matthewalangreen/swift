@@ -86,31 +86,32 @@ class DotScene: SKScene {
        // testColors()
     }
     
-    func swiftPulse() {
-        for dot in dots {
-            let action = SKAction.scale(by: 1.01, duration: 0.005)
-            dot.run(action)
-            cleanUp(dot)
-        }
-    }
-    
     override func update(_ currentTime: TimeInterval) {
         for dot in dots {
-            dot.newPulse()
+            dot.pulse()
+            dot.update()
             cleanUp(dot)
+            print("Position: \(dot.position)")
         }
     }
     
+    
+    // MARK:- TODO
+    // Fix this... it doesn't make sense in new context
     func cleanUp(_ dot: Dot) {
-            let displaySize: CGRect = UIScreen.main.bounds
-            let displayWidth = displaySize.width
-     
-        // remove dot if its too big...
-            if(dot.xScale * dot.radius > displayWidth * 2) {
-                dot.removeFromParent()
-                print("dot removed")
-            }
+        if(dot.isDead()) {
+            dot.removeFromParent()
         }
+    }
+//            let displaySize: CGRect = UIScreen.main.bounds
+//            let displayWidth = displaySize.width
+//
+//        // remove dot if its too big...
+//            if(dot.xScale * dot.radius > displayWidth * 2) {
+//                dot.removeFromParent()
+//                print("dot removed")
+//            }
+//        }
     }
     
 

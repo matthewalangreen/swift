@@ -12,6 +12,16 @@ import SpriteKit
 class Dot: SKShapeNode {
     // Data
     
+    // inherited
+    // self.location
+    // self.xScale
+    // self.yScale
+    // self.fillColor
+    // self.fillTexture
+    // self.lineWidth
+    // self.isAntialiased: Bool
+    // ... others
+    
     // set in default
     var velocity: CGVector = CGVector(dx: -11, dy: -11)
     var acceleration: CGVector = CGVector(dx: -11, dy: -11)
@@ -38,8 +48,9 @@ class Dot: SKShapeNode {
         self.init()
         self.init(circleOfRadius: self.radius)
         self.firstPoint = firstPoint
-        location = CGVector(dx: firstPoint.x, dy: firstPoint.y)
-        newLocation = location
+        self.location = CGVector(dx: firstPoint.x, dy: firstPoint.y)
+        self.position = firstPoint
+        self.newLocation = location
         self.dotColor = dotColor
     }
     
@@ -51,23 +62,13 @@ class Dot: SKShapeNode {
     // Methods
     func pulse() {
         counter += 1
-        if(counter > 30) {
+        if(counter > 40) {
             counter = 0
             growing = !growing
             radiusChange = -1*radiusChange
         }
-        radius += radiusChange
-    }
-    
-    func newPulse() {
-        counter += 1
-        if(counter > 30) {
-            counter = 0
-            growing = !growing
-            radiusChange = -1*radiusChange
-        }
-        self.xScale += radiusChange
-        self.yScale += radiusChange
+        self.xScale += radiusChange * 0.1
+        self.yScale += radiusChange * 0.1
     }
     
     func getMaxSpeed() -> CGFloat {
@@ -111,12 +112,12 @@ class Dot: SKShapeNode {
     }
 
     func update() {
-        velocity = velocity.sum(acceleration)
+        //velocity = velocity.sum(acceleration)
         // velocity.limit(maxSpeed) // I may need this but I haven't impelemented yet
-        location = location.sum(velocity)
-        acceleration = acceleration.multiply(0)
+        //location = location.sum(velocity)
+       // acceleration = acceleration.multiply(0)
         lifespan -= deathRate
-        pulse()
+        //pulse()
     }
     
     func applyForce(_ force: CGVector) {
