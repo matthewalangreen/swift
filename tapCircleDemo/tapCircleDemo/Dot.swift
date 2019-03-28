@@ -10,20 +10,9 @@ import UIKit
 import SpriteKit
 
 class Dot: SKShapeNode {
-    // Data
+    //MARK:- Properties
     
-    // inherited
-    // self.location
-    // self.xScale
-    // self.yScale
-    // self.fillColor
-    // self.fillTexture
-    // self.lineWidth
-    // self.isAntialiased: Bool
-    // self.alpha
-    // ... others
-    
-    // set in default
+    // set in default init
     var velocity: CGVector = CGVector(dx: -11, dy: -11)
     var acceleration: CGVector = CGVector(dx: -11, dy: -11)
     var radius: CGFloat = CGFloat(Int.random(in: 10 ..< 50))
@@ -31,7 +20,7 @@ class Dot: SKShapeNode {
     var maxForce: CGFloat = 1.2 // 0.4 is default
     var maxSpeed: CGFloat = 16 // 7 is default
     var radiusChange: CGFloat = 0.1 // 0.04 is default
-    var deathRate: CGFloat = 0.4 // 0.8 is default
+    var deathRate: CGFloat = 0.2 // 0.8 is default
     var counter: Int = 0
     var growing: Bool = true
     
@@ -60,7 +49,7 @@ class Dot: SKShapeNode {
     }
    
     
-    // Methods
+    //MARK:- Methods
     func pulse() {
         counter += 1
         if(counter > 40) {
@@ -70,55 +59,6 @@ class Dot: SKShapeNode {
         }
         self.xScale += radiusChange * 0.1
         self.yScale += radiusChange * 0.1
-    }
-    
-    func getMaxSpeed() -> CGFloat {
-        return maxSpeed
-    }
-    
-    func getMaxForce() -> CGFloat {
-        return maxForce
-    }
-    
-    func increaseMaxSpeed() {
-        maxSpeed += 0.25
-    }
-    
-    func decreaseMaxSpeed() {
-        maxSpeed -= 0.25
-    }
-    
-    func increaseMaxForce() {
-        maxForce += 0.25
-    }
-    
-    func decreaseMaxForce() {
-        maxForce -= 0.25
-    }
-    
-    func getNewLocation() -> CGVector {
-        return newLocation
-    }
-    
-    func setNewLocation(x: CGFloat, y: CGFloat) {
-        newLocation = CGVector(dx: x, dy: y)
-    }
-    
-    func getFirstPoint() -> CGPoint {
-        return firstPoint
-    }
-    
-    func getRadius() -> CGFloat {
-        return self.radius
-    }
-
-    func update() {
-        //velocity = velocity.sum(acceleration)
-        // velocity.limit(maxSpeed) // I may need this but I haven't impelemented yet
-        //location = location.sum(velocity)
-       // acceleration = acceleration.multiply(0)
-        //lifespan -= deathRate
-        //pulse()
     }
     
     func age() {
@@ -157,17 +97,46 @@ class Dot: SKShapeNode {
         applyForce(steer)
     }
     
-    func display() {
-        // change size, color and location
-    }
-    
-    func isDead() -> Bool {
-        if(lifespan < 0.0) {
-            return true
-        } else {
-            return false
-        }
-    }
+    //MARK: TODO -- Do we need these getter/setters?
+    //    func getMaxSpeed() -> CGFloat {
+    //        return maxSpeed
+    //    }
+    //
+    //    func getMaxForce() -> CGFloat {
+    //        return maxForce
+    //    }
+    //
+    //    func increaseMaxSpeed() {
+    //        maxSpeed += 0.25
+    //    }
+    //
+    //    func decreaseMaxSpeed() {
+    //        maxSpeed -= 0.25
+    //    }
+    //
+    //    func increaseMaxForce() {
+    //        maxForce += 0.25
+    //    }
+    //
+    //    func decreaseMaxForce() {
+    //        maxForce -= 0.25
+    //    }
+    //
+    //    func getNewLocation() -> CGVector {
+    //        return newLocation
+    //    }
+    //
+    //    func setNewLocation(x: CGFloat, y: CGFloat) {
+    //        newLocation = CGVector(dx: x, dy: y)
+    //    }
+    //
+    //    func getFirstPoint() -> CGPoint {
+    //        return firstPoint
+    //    }
+    //
+    //    func getRadius() -> CGFloat {
+    //        return self.radius
+    //    }
        
 }
 

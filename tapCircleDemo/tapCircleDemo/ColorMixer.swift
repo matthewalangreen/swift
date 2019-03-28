@@ -39,11 +39,6 @@ class ColorMixer {
         c2 = rawPalette[1]
     }
     
-    // methods
-//    func randomColor() -> UIColor {
-//        
-//    }
-    
     func mixColors(delta: CGFloat) -> UIColor {
         x += delta
         if(x > limit) {
@@ -69,7 +64,5 @@ class ColorMixer {
         }
         return lerpColor(c1,c2,x)
     }
-    
-  
-    
+
 }
