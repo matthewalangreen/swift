@@ -20,6 +20,7 @@ class Dot: SKShapeNode {
     // self.fillTexture
     // self.lineWidth
     // self.isAntialiased: Bool
+    // self.alpha
     // ... others
     
     // set in default
@@ -116,8 +117,14 @@ class Dot: SKShapeNode {
         // velocity.limit(maxSpeed) // I may need this but I haven't impelemented yet
         //location = location.sum(velocity)
        // acceleration = acceleration.multiply(0)
-        lifespan -= deathRate
+        //lifespan -= deathRate
         //pulse()
+    }
+    
+    func age() {
+        lifespan -= deathRate
+        let relSpan = map(lifespan,300,500,0,1)
+        self.alpha = relSpan
     }
     
     func applyForce(_ force: CGVector) {
@@ -139,7 +146,7 @@ class Dot: SKShapeNode {
         desired = desired.normalize()
         
         if(d < 100) {
-            let m: CGFloat = map(val: d, minA: 0, maxA: 100, minB: 0, maxB: maxSpeed)
+            let m: CGFloat = map(d, 0, 100, 0, maxSpeed)
             desired = desired.multiply(m)
         } else {
             desired = desired.multiply(maxSpeed)

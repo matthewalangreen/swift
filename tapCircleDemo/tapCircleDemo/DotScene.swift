@@ -89,9 +89,9 @@ class DotScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         for dot in dots {
             dot.pulse()
-            dot.update()
+            dot.age()
             cleanUp(dot)
-            print("Position: \(dot.position)")
+            print("alpha: \(dot.alpha)")
         }
     }
     
@@ -99,7 +99,7 @@ class DotScene: SKScene {
     // MARK:- TODO
     // Fix this... it doesn't make sense in new context
     func cleanUp(_ dot: Dot) {
-        if(dot.isDead()) {
+        if(dot.alpha < 0) {
             dot.removeFromParent()
         }
     }

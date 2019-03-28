@@ -19,6 +19,7 @@ func lerpColor(_ first: color, _ second: color, _ amount: CGFloat) -> UIColor {
     return UIColor(red: r, green: g, blue: b, alpha: 1.0)
 }
 
-func map(val: CGFloat, minA: CGFloat, maxA: CGFloat, minB: CGFloat, maxB: CGFloat) -> CGFloat {
-    return 1.0
+func map(_ val: CGFloat, _ minA: CGFloat, _ maxA: CGFloat, _ minB: CGFloat, _ maxB: CGFloat) -> CGFloat {
+    return (((val - minA) * (maxB - minB)) / (maxA - minA)) + minB
 }
+
