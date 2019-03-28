@@ -9,7 +9,13 @@
 import UIKit
 import SpriteKit
 
+var scene: DotScene!
+
 class TouchDotViewController: UIViewController {
+    
+    @IBAction func changeCurve(_ sender: Any) {
+        scene.changeCurve()
+    }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .landscapeLeft
@@ -24,7 +30,7 @@ class TouchDotViewController: UIViewController {
         
         let screen = UIScreen.main.bounds
         //let scene = DotScene(size: CGSize(width: 1536, height: 2048))
-        let scene = DotScene(size: CGSize(width: screen.width, height: screen.height))
+        scene = DotScene(size: CGSize(width: screen.width, height: screen.height))
         let skView = self.view as! SKView
         skView.showsFPS = true
         skView.showsNodeCount = true
