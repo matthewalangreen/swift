@@ -27,35 +27,15 @@ let palette: [color] = [
     (105/255,166/255,142/255),
     (106/255,166/255,130/255)
     ]
-
-let oldPalette: [color] = [
-    (194,86,119),
-    (199,122,159),
-    (178,116,158),
-    (157,111,156),
-    (139,108,155),
-    (125,110,160),
-    (117,114,163),
-    (81,90,157),
-    (118,145,199),
-    (101,174,208),
-    (92,153,169),
-    (99,172,171),
-    (255,131,0),
-    (100,170,154),
-    (105,166,142),
-    (106,166,130)
-]
-
 let colorMixer: ColorMixer = ColorMixer.init(colors: palette)
 
 class DotScene: SKScene {
     
-    let cameraNode = SKCameraNode()
+    //let cameraNode = SKCameraNode()
     
     let colors = [SKColor.yellow, SKColor.red, SKColor.blue, SKColor.purple]
 
-    var dots: [SKNode] = []
+    var dots: [Dot] = []
     
     func testColors() {
         for i in 0...15 {
@@ -65,14 +45,27 @@ class DotScene: SKScene {
         }
     }
     
+   
+   
+    func addDotObject(point: CGPoint) {
+        let nextColor = colorMixer.mixColors(delta: 0.05)
+        let dotObject = Dot.init(firstPoint: point, dotColor: nextColor)
+        dotObject.fillColor = nextColor
+        dotObject.position = point
+        dotObject.lineWidth = 0
+        dots.append(dotObject)
+        addChild(dotObject)
+        print("new dot at \(dotObject.position)")
+    }
 
+    
     func addDot(point: CGPoint){
         let dot = SKShapeNode(circleOfRadius: 40)
         dot.fillColor = colorMixer.mixColors(delta: 0.05)
         //dot.fillColor = .blue
         dot.position = point
         dot.lineWidth = 0
-        dots.append(dot)
+        dots.append(dot as! Dot)
         addChild(dot)
     }
     
@@ -81,23 +74,45 @@ class DotScene: SKScene {
         dot.fillColor = color
         dot.position = point
         dot.lineWidth = 0
-        dots.append(dot)
+        dots.append(dot as! Dot)
         addChild(dot)
     }
 
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first!
         let location = touch.location(in: self)
-        addDot(point: location)
+        //addDot(point: location)
+        addDotObject(point: location)
        // testColors()
-       // addDot(point: CGPoint(x: 0, y: 0))
-        //print(location)
     }
-        
     
-   
+    func swiftPulse() {
+        for dot in dots {
+            let action = SKAction.scale(by: 1.01, duration: 0.005)
+            dot.run(action)
+            cleanUp(dot)
+        }
+    }
     
-}
+    override func update(_ currentTime: TimeInterval) {
+        for dot in dots {
+            dot.newPulse()
+            cleanUp(dot)
+        }
+    }
+    
+    func cleanUp(_ dot: Dot) {
+            let displaySize: CGRect = UIScreen.main.bounds
+            let displayWidth = displaySize.width
+     
+        // remove dot if its too big...
+            if(dot.xScale * dot.radius > displayWidth * 2) {
+                dot.removeFromParent()
+                print("dot removed")
+            }
+        }
+    }
+    
+
 
 
