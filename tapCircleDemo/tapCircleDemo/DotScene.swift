@@ -35,22 +35,11 @@ class DotScene: SKScene {
         dot.fillColor = nextColor
         dot.position = point
         dot.lineWidth = 0
-        dot.newLocation = myGraph.getNextVector()
+        dot.newLocation = myGraph.getCorrespondingVector(dots.count + 1)
         dots.append(dot)
         addChild(dot)
         //print("new dot at \(dotObject.position)")
     }
-    
-    func cleanUp(_ dot: Dot) {
-        if(dot.alpha < 0) {
-            dot.removeFromParent()
-        }
-    }
-    
-//    override func sceneDidLoad() {
-//        let firstDot = Dot.init(firstPoint: CGPoint.init(x: midX, y: midY), dotColor: .white)
-//        addChild(firstDot)
-//    }
 
     //MARK:- Touches
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -66,16 +55,23 @@ class DotScene: SKScene {
        // let bounds = UIScreen.m
         //let centerPointVector = CGVector.init(dx: midX, dy: midY)
         
-        for dot in dots {
+        for (index,dot) in dots.enumerated() {
             if(moving) {
-                dot.arrive(dot.newLocation)
+                dot.arrive(myGraph.getCorrespondingVector(index))
             }
+            
+            // if dot dies
+            if (dot.alpha < 0) {
+                dot.removeFromParent()
+                dots.remove(at: index)
+            }
+            
             dot.applyPhysics()
             dot.pulse()
             dot.age()
-            cleanUp(dot)
-            //print("alpha: \(dot.alpha)")
+        
         }
+        
     }
    
     }

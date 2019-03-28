@@ -17,6 +17,7 @@ func lerpColor(_ first: color, _ second: color, _ amount: CGFloat) -> UIColor {
     var g = (1.0 - amount) * first.green + amount * second.green
     var b = (1.0 - amount) * first.blue + amount * second.blue
     
+    // error checking for weird values... 
     if (r < 0) { r = 0 }
     if (r > 1) { r = 1 }
     if (g < 0) { g = 0 }

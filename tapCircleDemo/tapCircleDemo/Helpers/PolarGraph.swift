@@ -45,4 +45,12 @@ class PolarGraph {
         }
         return valueVectors[valueVectorIndex]
     }
+    
+    func getCorrespondingVector(_ dotArrayPosition: Int) -> CGVector {
+        if (dotArrayPosition < valueVectors.count) {
+            return valueVectors[dotArrayPosition]
+        } else {
+            return CGVector.init(dx: 0, dy: 0) // put at origin if issue
+        }
+    }
 }
