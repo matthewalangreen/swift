@@ -14,7 +14,7 @@ class PolarGraph {
     var period: CGFloat = CGFloat.pi / 2
     var theta: CGFloat = 0
     var alpha: CGFloat = 0
-    var dotController: CGFloat = 50
+    var dotController: CGFloat = 50 // 50 is default
     var increment: CGFloat = 0
     var size: CGFloat = 450
     var valueVectors = [CGVector]()
