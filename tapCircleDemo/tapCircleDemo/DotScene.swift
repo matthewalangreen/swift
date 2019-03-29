@@ -8,15 +8,18 @@
 
 import SpriteKit
 
-var curveIndex: Int = 0
-let colorMixer: ColorMixer = ColorMixer.init(colors: palette)
-let myGraph: PolarGraph = PolarGraph.init(0.2)
-
 let bounds = UIScreen.main.bounds
 let width = bounds.width
 let height = bounds.height
 let midX = width / 2
 let midY = height / 2
+
+var curveIndex: Int = 0
+let colorMixer: ColorMixer = ColorMixer.init(colors: palette)
+//let myGraph: PolarGraph = PolarGraph.init(0.2)
+let myGraph: PolarGraph = PolarGraph.init(0.2, height * 0.4)
+
+
 
 var moving: Bool = true
 
@@ -36,6 +39,10 @@ class DotScene: SKScene {
             curveIndex = 0
         }
         myGraph.calculateValuePairs(aVals[curveIndex])
+    }
+    
+    func changeCurve(_ value: CGFloat) {
+        myGraph.calculateValuePairs(value)
     }
     
     func addDot(point: CGPoint) {

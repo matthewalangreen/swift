@@ -16,7 +16,7 @@ class PolarGraph {
     var alpha: CGFloat = 0
     var dotController: CGFloat = 50 // 50 is default
     var increment: CGFloat = 0
-    var size: CGFloat = 450
+    //var size: CGFloat = 450
     var valueVectors = [CGVector]()
     var graphSize: CGFloat = 180
     var valueVectorIndex = 0
@@ -24,6 +24,13 @@ class PolarGraph {
     //MARK:- Init
     init(_ val: CGFloat) {
         increment = self.period / self.dotController
+        calculateValuePairs(val)
+    }
+    
+    convenience init(_ val: CGFloat, _ graphSize: CGFloat) {
+        self.init(val)
+        increment = self.period / self.dotController
+        self.graphSize = graphSize
         calculateValuePairs(val)
     }
     

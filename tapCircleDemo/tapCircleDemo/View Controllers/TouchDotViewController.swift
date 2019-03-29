@@ -17,6 +17,10 @@ class TouchDotViewController: UIViewController {
         scene.changeCurve()
     }
     
+    @IBAction func slideCurveValue(_ sender: UISlider) {
+        scene.changeCurve(CGFloat(sender.value))
+    }
+    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .landscapeLeft
     }
