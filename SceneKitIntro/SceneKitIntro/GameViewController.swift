@@ -6,6 +6,8 @@
 //  Copyright © 2019 Matt Green. All rights reserved.
 //
 
+// LYNDA.COM TUTORIAL COURSE: https://www.lynda.com/iOS-tutorials/How-SceneKit-handles-touch/596134/638713-4.html?autoplay=true
+
 import UIKit
 import SceneKit
 
